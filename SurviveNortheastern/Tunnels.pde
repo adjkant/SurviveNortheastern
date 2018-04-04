@@ -13,10 +13,10 @@ class Tunnels {
     drawForsyth();
   }
   
-  public void drawForsyth(){
-    new Drawing().drawBuilding(1 * GRID_HEIGHT_SIZE,
-                               5 * GRID_WIDTH_SIZE);
-  }
+  //public void drawForsyth(){
+  //  new Drawing().drawBuilding(1 * GRID_HEIGHT_SIZE,
+  //                             5 * GRID_WIDTH_SIZE);
+  //}
 
     public void drawCabot(){
     new Drawing().drawBuilding(1 * GRID_HEIGHT_SIZE,

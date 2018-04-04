@@ -21,10 +21,12 @@ void draw() {
 class Game {
   Tunnels tunnels;
   ArrayList<Level> levels;
+  int currentLevel;
   
   Game(ArrayList<Level> levels) {
     this.tunnels = new Tunnels();
     this.levels = levels;
+    this.currentLevel = 1;
   }
   
   void drawGame() {
@@ -33,6 +35,18 @@ class Game {
   }
   
   private void drawCurrentLevel() {
-    // TODO
+    try {
+      this.getCurrentLevel().drawLevel();
+    } catch (LevelNotFoundException e) {
+      e.printStackTrace();
+    }
+  }
+  
+  private Level getCurrentLevel() throws LevelNotFoundException {
+    if (this.levels.size() >= this.currentLevel) {
+      return this.levels.get(this.currentLevel - 1);
+    } else {
+      throw new LevelNotFoundException();
+    }
   }
 }
