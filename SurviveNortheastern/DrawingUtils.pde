@@ -29,8 +29,12 @@ public class Drawing {
   public void drawVerticalLine(int pos) {   
     line(pos, GAME_SIZE, pos, 0);
   }
-  
   public void drawHorizontalLine(int pos) {   
     line(GAME_SIZE, pos, 0, pos);
+  }
+  
+  public void drawBuilding(int x, int y) {
+    fill(255,200,200);
+    ellipse(x, y, 20, 20);
   }
 }
