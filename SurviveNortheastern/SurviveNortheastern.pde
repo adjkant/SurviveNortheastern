@@ -11,7 +11,7 @@ void setup() {
 }
 
 void draw() {
-  background(0,0,0);
+  background(255, 255, 255);
   Tunnels t = new Tunnels();
   t.drawTunnels();
 

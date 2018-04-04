@@ -25,4 +25,12 @@ public class Drawing {
     shape(s);
     popMatrix();
   }
+  
+  public void drawVerticalLine(int pos) {   
+    line(pos, GAME_SIZE, pos, 0);
+  }
+  
+  public void drawHorizontalLine(int pos) {   
+    line(GAME_SIZE, pos, 0, pos);
+  }
 }
