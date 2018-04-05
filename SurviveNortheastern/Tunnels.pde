@@ -21,6 +21,15 @@ class Tunnels {
     
     addForsyth();
     addSnellEngineering();
+    addCabot();
+    addChurchill();
+    addSnell();
+    addHayden();
+    addRichard();
+    addEll();
+    addCurry();
+    addDodge();
+    addMugar();
    
     
     this.paths = new ArrayList<Path>();
@@ -59,16 +68,135 @@ class Tunnels {
     this.buildings.add(new Building(2, 24, new PVector(0, 255, 0), forsythLabel));
   }
   
+    private void addCabot() {
+      String cabotLabel = "CA";
+      PVector orange = new PVector (255,165,0);
+      
+      this.buildings.add(new Building(12, 13, orange, cabotLabel));
+      this.buildings.add(new Building(13, 13, orange, cabotLabel));
+      this.buildings.add(new Building(12, 12, orange, cabotLabel));
+      this.buildings.add(new Building(13, 12, orange, cabotLabel));
+  }
+  
+    private void addChurchill() {
+      String churchLabel = "Cu";
+      PVector orange = new PVector (255,105,0);
+      
+      this.buildings.add(new Building(12, 23, orange, churchLabel));
+      this.buildings.add(new Building(13, 23, orange, churchLabel));
+      this.buildings.add(new Building(12, 24, orange, churchLabel));
+      this.buildings.add(new Building(13, 24, orange, churchLabel));
+  }
+  
+   private void addSnell() {
+    String snellLabel = "SE";
+    
+    PVector blue = new PVector(66, 134, 244);
+    
+    this.buildings.add(new Building(20, 33, blue, snellLabel));
+    this.buildings.add(new Building(20, 32, blue, snellLabel));
+    this.buildings.add(new Building(21, 32, blue, snellLabel));
+    this.buildings.add(new Building(21, 33, blue, snellLabel));
+    
+   }
+   
+    private void addHayden() {
+      String haydenLabel = "HA";
+      
+      PVector blue = new PVector(194, 137, 255);
+      
+      this.buildings.add(new Building(24, 17, blue, haydenLabel));
+      this.buildings.add(new Building(24, 18, blue, haydenLabel));
+      this.buildings.add(new Building(25, 17, blue, haydenLabel));
+      this.buildings.add(new Building(25, 18, blue, haydenLabel));
+    
+   }
+   
+   private void addRichard() {
+      String haydenLabel = "RI";
+      
+      PVector blue = new PVector(137, 215, 255);
+      
+      this.buildings.add(new Building(24, 5, blue, haydenLabel));
+      this.buildings.add(new Building(24, 4, blue, haydenLabel));
+      this.buildings.add(new Building(25, 5, blue, haydenLabel));
+      this.buildings.add(new Building(25, 4, blue, haydenLabel));
+    
+   }
+   
+      private void addCurry() {
+      String haydenLabel = "HA";
+      
+      PVector blue = new PVector(250, 2, 2);
+      
+      this.buildings.add(new Building(32, 28, blue, haydenLabel));
+      this.buildings.add(new Building(31, 28, blue, haydenLabel));
+      this.buildings.add(new Building(32, 29, blue, haydenLabel));
+      this.buildings.add(new Building(31, 29, blue, haydenLabel));
+    
+   }
+   
+   private void addEll() {
+      String haydenLabel = "HA";
+      
+      PVector blue = new PVector(137, 215, 255);
+      
+      this.buildings.add(new Building(32, 13, blue, haydenLabel));
+      this.buildings.add(new Building(32, 12, blue, haydenLabel));
+      this.buildings.add(new Building(31, 13, blue, haydenLabel));
+      this.buildings.add(new Building(31, 12, blue, haydenLabel));
+    
+   }
+   
+   private void addDodge() {
+      String haydenLabel = "HA";
+      
+      PVector blue = new PVector(137, 215, 255);
+      
+      this.buildings.add(new Building(40, 5, blue, haydenLabel));
+      this.buildings.add(new Building(39, 5, blue, haydenLabel));
+      this.buildings.add(new Building(39, 4, blue, haydenLabel));
+      this.buildings.add(new Building(40, 4, blue, haydenLabel));
+    
+   }
+   private void addMugar() {
+      String haydenLabel = "HA";
+      
+      PVector blue = new PVector(76, 34, 1);
+      
+      this.buildings.add(new Building(40, 17, blue, haydenLabel));
+      this.buildings.add(new Building(39, 18, blue, haydenLabel));
+      this.buildings.add(new Building(39, 17, blue, haydenLabel));
+      this.buildings.add(new Building(40, 18, blue, haydenLabel));
+    
+   }
+  // Where all the buildings are:
+  /*
+  1, 23 = Forsyth
+  8, 34 = Sneg
+  12, 23 = Church
+  20, 33 = Snell
+  24, 17 = Hayden
+  12, 13 = Cabot
+  25, 5 = Richard
+  32, 13 = Ell
+  32, 28 = curry
+  40, 5 = dodge
+  40, 17 = mugar
+  */
+  
   private void addSnellEngineering() {
     String snellEngineeringLabel = "SE";
     
-    this.buildings.add(new Building(8, 34, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 35, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 36, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 37, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 38, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 39, new PVector(0, 0, 255), snellEngineeringLabel));
-    this.buildings.add(new Building(8, 40, new PVector(0, 0, 255), snellEngineeringLabel));
+    PVector blue = new PVector (0, 0, 255);
+    
+    this.buildings.add(new Building(8, 34, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 35, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 36, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 37, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 38, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 39, blue, snellEngineeringLabel));
+    this.buildings.add(new Building(8, 40, blue, snellEngineeringLabel));
     
     this.buildings.add(new Building(7, 35, new PVector(0, 0, 255), snellEngineeringLabel));
     this.buildings.add(new Building(7, 34, new PVector(0, 0, 255), snellEngineeringLabel));
