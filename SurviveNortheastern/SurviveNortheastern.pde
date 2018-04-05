@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-static final int GAME_SIZE = 700;
+static final int GAME_SIZE = 800;
 
 Game game;
 
@@ -9,11 +9,13 @@ void settings() {
 }
 
 void setup() {
-  game = new Game(new ArrayList<Level>());
+  ArrayList<Level> levels = new ArrayList<Level>();
+  levels.add(new Level(10, 10, new ArrayList<Enemy>(), new ArrayList<Item>()));
+  game = new Game(levels);
 }
 
 void draw() {
-  background(255, 255, 255);
+  background(0, 0, 0);
   game.drawGame();
 }
 

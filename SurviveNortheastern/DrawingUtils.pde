@@ -3,6 +3,14 @@ public class Drawing {
   
   public Drawing() {}
   
+  void drawSquare(int xGrid, int yGrid, PVector c) {
+    drawShapeCenter(createShape(RECT, -SQUARE_SIZE/2, -SQUARE_SIZE/2, SQUARE_SIZE, SQUARE_SIZE), 
+                    xGrid * SQUARE_SIZE - SQUARE_SIZE/2, 
+                    yGrid * SQUARE_SIZE - SQUARE_SIZE/2, 
+                    0, 
+                    c, c);
+  }
+  
   // Draw black shape
   void drawShapeCenter(PShape s, int x, int y, int degrees) {
     drawShapeCenter(s, x, y, degrees, 0, 0);
@@ -10,15 +18,15 @@ public class Drawing {
 
   // Draw shape with given stroke/fill greyscale
   void drawShapeCenter(PShape s, int x, int y, int degrees, int stroke, int fill) {
-    int[] stroke3 = {stroke, stroke, stroke};
-    int[] fill3 = {fill, fill, fill};
+    PVector stroke3 = new PVector(stroke, stroke, stroke);
+    PVector fill3 = new PVector(fill, fill, fill);
     drawShapeCenter(s, x, y, degrees, stroke3, fill3);
   }
   
   // Draw a shape centered on x and y at angle degrees with the given stroke and fill
-  void drawShapeCenter(PShape s, int x, int y, int degrees, int[] stroke, int[] fill) {
-    stroke(stroke[0], stroke[1], stroke[2]);
-    fill(fill[0], fill[1], fill[2]);
+  void drawShapeCenter(PShape s, int x, int y, int degrees, PVector stroke, PVector fill) {
+    stroke(stroke.x, stroke.y, stroke.z);
+    fill(fill.x, fill.y, fill.z);
     pushMatrix();
     translate(x, y);
     rotate(radians(degrees));
@@ -26,14 +34,14 @@ public class Drawing {
     popMatrix();
   }
   
-  public void drawVerticalLine(int pos) {   
+  void drawVerticalLine(int pos) {   
     line(pos, GAME_SIZE, pos, 0);
   }
-  public void drawHorizontalLine(int pos) {   
+  void drawHorizontalLine(int pos) {   
     line(GAME_SIZE, pos, 0, pos);
   }
   
-  public void drawBuilding(int x, int y) {
+  void drawBuilding(int x, int y) {
     fill(255,200,200);
     ellipse(x, y, 20, 20);
   }
