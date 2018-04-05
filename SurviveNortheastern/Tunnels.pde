@@ -36,6 +36,7 @@ class Tunnels {
     
     addFtoSE();
     addFtoSNE();
+    addCH();
  
   }
   
@@ -79,7 +80,7 @@ class Tunnels {
   }
   
     private void addChurchill() {
-      String churchLabel = "Cu";
+      String churchLabel = "CH";
       PVector orange = new PVector (255,105,0);
       
       this.buildings.add(new Building(12, 23, orange, churchLabel));
@@ -125,7 +126,7 @@ class Tunnels {
    }
    
       private void addCurry() {
-      String haydenLabel = "HA";
+      String haydenLabel = "CU";
       
       PVector blue = new PVector(250, 2, 2);
       
@@ -137,7 +138,7 @@ class Tunnels {
    }
    
    private void addEll() {
-      String haydenLabel = "HA";
+      String haydenLabel = "EL";
       
       PVector blue = new PVector(137, 215, 255);
       
@@ -149,7 +150,7 @@ class Tunnels {
    }
    
    private void addDodge() {
-      String haydenLabel = "HA";
+      String haydenLabel = "DO";
       
       PVector blue = new PVector(137, 215, 255);
       
@@ -160,7 +161,7 @@ class Tunnels {
     
    }
    private void addMugar() {
-      String haydenLabel = "HA";
+      String haydenLabel = "MU";
       
       PVector blue = new PVector(76, 34, 1);
       
@@ -226,6 +227,198 @@ class Tunnels {
   }
   
   // Path Additions
+  
+  private void addCH() {
+    //add churchill
+    this.paths.add(new Path(12, 22, grey));
+    this.paths.add(new Path(13, 22, grey));
+    
+    //add snell
+    this.paths.add(new Path(20, 31, grey));
+    this.paths.add(new Path(21, 30, grey));
+    this.paths.add(new Path(20, 30, grey));
+    this.paths.add(new Path(21, 31, grey));
+    this.paths.add(new Path(21, 29, grey));
+    this.paths.add(new Path(20, 29, grey));
+    this.paths.add(new Path(21, 28, grey));
+    this.paths.add(new Path(20, 28, grey));
+    this.paths.add(new Path(21, 27, grey));
+    this.paths.add(new Path(21, 26, grey));
+    this.paths.add(new Path(21, 25, grey));
+    this.paths.add(new Path(21, 24, grey));
+    this.paths.add(new Path(21, 23, grey));
+    this.paths.add(new Path(21, 22, grey));
+    this.paths.add(new Path(21, 21, grey));
+    this.paths.add(new Path(21, 20, grey));
+    this.paths.add(new Path(20, 27, grey));
+    this.paths.add(new Path(20, 26, grey));
+    this.paths.add(new Path(20, 25, grey));
+    this.paths.add(new Path(20, 24, grey));
+    this.paths.add(new Path(20, 23, grey));
+    this.paths.add(new Path(20, 22, grey));
+    this.paths.add(new Path(20, 21, grey));
+    this.paths.add(new Path(20, 20, grey));
+    this.paths.add(new Path(19, 20, grey));
+    this.paths.add(new Path(19, 21, grey));
+    
+    //addHayden
+    this.paths.add(new Path(20, 19, grey));
+    this.paths.add(new Path(20, 18, grey));
+    this.paths.add(new Path(20, 17, grey));
+    this.paths.add(new Path(20, 16, grey));
+    this.paths.add(new Path(20, 15, grey));
+    this.paths.add(new Path(21, 19, grey));
+    this.paths.add(new Path(21, 18, grey));
+    this.paths.add(new Path(21, 17, grey));
+    this.paths.add(new Path(21, 16, grey));
+    this.paths.add(new Path(21, 15, grey));
+    
+    this.paths.add(new Path(22, 15, grey));
+    this.paths.add(new Path(23, 15, grey));
+    this.paths.add(new Path(24, 15, grey));
+    this.paths.add(new Path(24, 16, grey));
+    this.paths.add(new Path(25, 15, grey));
+    this.paths.add(new Path(25, 16, grey));
+
+    this.paths.add(new Path(25, 14, grey));
+    this.paths.add(new Path(25, 13, grey));
+    this.paths.add(new Path(25, 12, grey));
+    this.paths.add(new Path(24, 14, grey));
+    this.paths.add(new Path(24, 13, grey));
+    this.paths.add(new Path(24, 12, grey));
+    
+    this.paths.add(new Path(23, 13, grey));
+    this.paths.add(new Path(22, 13, grey));
+    this.paths.add(new Path(21, 13, grey));
+    this.paths.add(new Path(20, 13, grey));
+    this.paths.add(new Path(19, 13, grey));
+    this.paths.add(new Path(18, 13, grey));
+    this.paths.add(new Path(17, 13, grey));
+    this.paths.add(new Path(16, 13, grey));
+    this.paths.add(new Path(15, 13, grey));
+    this.paths.add(new Path(14, 13, grey));
+    this.paths.add(new Path(23, 12, grey));
+    this.paths.add(new Path(22, 12, grey));
+    this.paths.add(new Path(21, 12, grey));
+    this.paths.add(new Path(20, 12, grey));
+    this.paths.add(new Path(19, 12, grey));
+    this.paths.add(new Path(18, 12, grey));
+    this.paths.add(new Path(17, 12, grey));
+    this.paths.add(new Path(16, 12, grey));
+    this.paths.add(new Path(15, 12, grey));
+    this.paths.add(new Path(14, 12, grey));
+    
+    //add ell
+    this.paths.add(new Path(26, 12, grey));
+    this.paths.add(new Path(27, 12, grey));
+    this.paths.add(new Path(28, 12, grey));
+    this.paths.add(new Path(29, 12, grey));
+    this.paths.add(new Path(30, 12, grey));
+    this.paths.add(new Path(26, 13, grey));
+    this.paths.add(new Path(27, 13, grey));  
+    this.paths.add(new Path(28, 13, grey));
+    this.paths.add(new Path(29, 13, grey));
+    this.paths.add(new Path(30, 13, grey));
+    
+    //add curry
+    this.paths.add(new Path(31, 14, grey));
+    this.paths.add(new Path(31, 15, grey));
+    this.paths.add(new Path(31, 16, grey));
+    this.paths.add(new Path(31, 17, grey));
+    this.paths.add(new Path(31, 18, grey));
+    this.paths.add(new Path(31, 19, grey)); 
+    this.paths.add(new Path(31, 20, grey)); 
+    this.paths.add(new Path(31, 21, grey)); 
+    this.paths.add(new Path(31, 22, grey)); 
+    this.paths.add(new Path(31, 23, grey)); 
+    this.paths.add(new Path(31, 24, grey)); 
+    this.paths.add(new Path(31, 25, grey)); 
+    this.paths.add(new Path(31, 26, grey)); 
+    this.paths.add(new Path(31, 27, grey)); 
+    this.paths.add(new Path(32, 14, grey));
+    this.paths.add(new Path(32, 15, grey));
+    this.paths.add(new Path(32, 16, grey));
+    this.paths.add(new Path(32, 17, grey));
+    this.paths.add(new Path(32, 18, grey));
+    this.paths.add(new Path(32, 19, grey)); 
+    this.paths.add(new Path(32, 20, grey)); 
+    this.paths.add(new Path(32, 21, grey)); 
+    this.paths.add(new Path(32, 22, grey)); 
+    this.paths.add(new Path(32, 23, grey)); 
+    this.paths.add(new Path(32, 24, grey)); 
+    this.paths.add(new Path(32, 25, grey)); 
+    this.paths.add(new Path(32, 26, grey)); 
+    this.paths.add(new Path(32, 27, grey)); 
+
+
+    // add Mugar
+    this.paths.add(new Path(33, 12, grey));
+    this.paths.add(new Path(34, 12, grey));
+    this.paths.add(new Path(35, 12, grey));
+    this.paths.add(new Path(36, 12, grey));
+    this.paths.add(new Path(33, 13, grey));
+    this.paths.add(new Path(34, 13, grey));  
+    this.paths.add(new Path(35, 13, grey));
+    this.paths.add(new Path(36, 13, grey));
+    this.paths.add(new Path(38, 13, grey));
+    this.paths.add(new Path(38, 12, grey));
+    
+     
+    this.paths.add(new Path(37, 12, grey));
+    this.paths.add(new Path(37, 13, grey));
+    this.paths.add(new Path(37, 14, grey));
+    this.paths.add(new Path(37, 15, grey));
+    this.paths.add(new Path(37, 16, grey));
+    this.paths.add(new Path(37, 17, grey));
+    this.paths.add(new Path(37, 18, grey));    
+    this.paths.add(new Path(38, 12, grey));
+    this.paths.add(new Path(38, 13, grey));
+    this.paths.add(new Path(38, 14, grey));
+    this.paths.add(new Path(38, 15, grey));
+    this.paths.add(new Path(38, 16, grey));
+    this.paths.add(new Path(38, 17, grey));
+    this.paths.add(new Path(38, 18, grey));
+    
+    // add richard
+    this.paths.add(new Path(26, 11, grey));
+    this.paths.add(new Path(26, 10, grey));
+    this.paths.add(new Path(26, 9, grey));
+    this.paths.add(new Path(26, 8, grey));
+    this.paths.add(new Path(26, 7, grey));
+    this.paths.add(new Path(26, 6, grey));
+    this.paths.add(new Path(26, 5, grey));
+    this.paths.add(new Path(26, 4, grey));   
+    this.paths.add(new Path(27, 11, grey));
+    this.paths.add(new Path(27, 10, grey));
+    this.paths.add(new Path(27, 9, grey));
+    this.paths.add(new Path(27, 8, grey));
+    this.paths.add(new Path(27, 7, grey));
+    this.paths.add(new Path(27, 6, grey));
+    this.paths.add(new Path(27, 5, grey));
+    this.paths.add(new Path(27, 4, grey));
+    
+    // add dodge
+    this.paths.add(new Path(38, 11, grey));
+    this.paths.add(new Path(38, 10, grey));
+    this.paths.add(new Path(38, 9, grey));
+    this.paths.add(new Path(38, 8, grey));
+    this.paths.add(new Path(38, 7, grey));
+    this.paths.add(new Path(38, 6, grey));
+    this.paths.add(new Path(38, 5, grey));
+    this.paths.add(new Path(38, 4, grey));
+    this.paths.add(new Path(37, 11, grey));
+    this.paths.add(new Path(37, 10, grey));
+    this.paths.add(new Path(37, 9, grey));
+    this.paths.add(new Path(37, 8, grey));
+    this.paths.add(new Path(37, 7, grey));
+    this.paths.add(new Path(37, 6, grey));
+    this.paths.add(new Path(37, 5, grey));
+    this.paths.add(new Path(37, 4, grey));
+        
+
+    
+
+}
   
   private void addFtoSE() {
     
