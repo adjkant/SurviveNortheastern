@@ -1,6 +1,7 @@
 
 
 class Level { 
+  //ArrayList<CutScene> cutScenes;
   PVector playerLocation;
   ArrayList<Enemy> enemies;
   ArrayList<Item> items;

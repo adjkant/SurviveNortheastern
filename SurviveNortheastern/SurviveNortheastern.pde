@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.util.*;
 
 static final int GAME_SIZE = 800;
 
