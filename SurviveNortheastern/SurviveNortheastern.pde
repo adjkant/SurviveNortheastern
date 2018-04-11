@@ -25,14 +25,17 @@ void draw() {
 
 void keyPressed() {
   try {
-    if (key == CODED) { 
+    Level curLevel = game.getCurrentLevel();
+    if (key == CODED && curLevel.isPlaying()) { 
       if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
-        game.getCurrentLevel().attemptMove(keyCode);
+        curLevel.attemptMove(keyCode);
       }
+    } else {
+      println("Not playing");
     }
     
     if (key == ' ') {
-        println(game.getCurrentLevel().nextLevelScene());
+        println(curLevel.nextLevelScene());
     }
     
   } catch (LevelNotFoundException e) {
