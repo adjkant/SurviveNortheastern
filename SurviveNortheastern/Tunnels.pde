@@ -9,7 +9,7 @@ int NUM_SQUARES_LENGTH = GAME_SIZE / SQUARE_SIZE;
 PVector grey = new PVector(193,193,193);
   
 class Tunnels {
-  
+  HashMap<PVector, ArrayList<PVector>> adjacencyList;
   ArrayList<Building> buildings;
   ArrayList<Path> paths;
   Drawing drawer;
@@ -37,7 +37,60 @@ class Tunnels {
     addFtoSE();
     addFtoSNE();
     addCH();
+    
+    this.generateAdjacencyList();
  
+  }
+  
+  boolean isValidMove(PVector loc, PVector newLoc) {
+    ArrayList<PVector> validMoves = this.adjacencyList.get(loc);
+    return validMoves.contains(newLoc);
+  }
+  
+  void generateAdjacencyList() {
+    for (Building b : this.buildings) {
+      PVector pos = new PVector(b.x, b.y);
+      ArrayList<PVector> adj = this.findAdjacentMoves(pos);
+      this.adjacencyList.put(pos, adj);
+    }
+    
+    for (Path p : this.paths) {
+      PVector pos = new PVector(p.x, p.y);
+      ArrayList<PVector> adj = this.findAdjacentMoves(pos);
+      this.adjacencyList.put(pos, adj);
+    }
+  }
+  
+  private ArrayList<PVector> findAdjacentMoves(PVector position) {
+    ArrayList<PVector> results = new ArrayList<PVector>();
+    
+    // Check buildings
+    for (Building b : this.buildings) {
+      PVector n =  new PVector(b.x, b.y);
+      if (this.isNeighbor(position, n)) {
+        results.add(n);
+        if (results.size() == 4) {
+          return results;
+        }
+      }
+    }
+    
+    // Check paths
+    for (Path p : this.paths) {
+      PVector n =  new PVector(p.x, p.y);
+      if (this.isNeighbor(position, n)) {
+        results.add(n);
+        if (results.size() == 4) {
+          return results;
+        }
+      }
+    }
+    
+    return results;
+  }
+  
+  private boolean isNeighbor(PVector a, PVector b) {
+    return (abs(a.x - b.x) == 0 && abs(a.y - b.y) == 1) || (abs(a.x - b.x) == 1 && abs(a.y - b.y) == 0);
   }
   
   void drawTunnels() {
