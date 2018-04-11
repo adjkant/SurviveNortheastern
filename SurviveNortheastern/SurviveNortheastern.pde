@@ -29,6 +29,7 @@ void keyPressed() {
     if (key == CODED && curLevel.isPlaying()) { 
       if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
         curLevel.attemptMove(keyCode);
+        println("arrow pressed");
       }
     } else {
       println("Not playing");
