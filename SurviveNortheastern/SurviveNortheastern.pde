@@ -13,13 +13,31 @@ void setup() {
   levels.add(new Level(new ArrayList(Arrays.asList("Test 1", "Test 2")), 
              12, 20, 
              new ArrayList<Enemy>(), 
-             new ArrayList<Item>()));
+             new ArrayList<Item>(),
+             new Tunnels()));
   game = new Game(levels);
 }
 
 void draw() {
   background(0, 0, 0);
   game.drawGame();
+}
+
+void keyPressed() {
+  try {
+    if (key == CODED) { 
+      if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
+        game.getCurrentLevel().attemptMove(keyCode);
+      }
+    }
+    
+    if (key == ' ') {
+        println(game.getCurrentLevel().nextLevelScene());
+    }
+    
+  } catch (LevelNotFoundException e) {
+      e.printStackTrace();
+  }
 }
 
 

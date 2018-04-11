@@ -10,7 +10,7 @@ class Level {
   Tunnels tunnels;
   PShape playerShape;
   
-  Level(ArrayList<String> cutScenes, int playerX, int playerY, ArrayList<Enemy> enemies, ArrayList<Item> items) {
+  Level(ArrayList<String> cutScenes, int playerX, int playerY, ArrayList<Enemy> enemies, ArrayList<Item> items, Tunnels tunnels) {
     this.cutScenes = cutScenes;
     this.cutScenePlace = 0;
     this.playerLocation = new PVector(playerX, playerY);
@@ -21,51 +21,44 @@ class Level {
     this.playerShape = createShape(ELLIPSE, 0, 0, PLAYER_SIZE, PLAYER_SIZE);
   }
   
-  void setup() {
-  }
-  
   void drawLevel() {
     // TODO
-    drawPlayer(this.playerLocation);
+    drawPlayer();
   }
   
-  void drawPlayer(PVector newLoc) {
+  void drawPlayer() {
     new Drawing().drawShapeCenter(this.playerShape, (int) playerLocation.x * PLAYER_SIZE, (int) playerLocation.y * PLAYER_SIZE, 0);
   }
   
-  void keyPressed() {
-    if (key == CODED) {
-      if (keyCode == UP) {
-        PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
-        if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
-            this.playerLocation = attemptLoc;
-            drawLevel();
-        }
+  void attemptMove(int keyCode) {
+    if (keyCode == UP) {
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
+          this.playerLocation = attemptLoc;
+          drawLevel();
       }
-        if (keyCode == DOWN) {
-        PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
-        if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
-            this.playerLocation = attemptLoc;
-            drawLevel();
-        }
-        }
-        if (keyCode == LEFT) {
-        PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
-        if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
-            this.playerLocation = attemptLoc;
-            drawLevel();
-        }
-        }
-        if (keyCode == RIGHT) {
-        PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
-        if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
-            this.playerLocation = attemptLoc;
-            drawLevel();
-        }
+    }
+      if (keyCode == DOWN) {
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
+          this.playerLocation = attemptLoc;
+          drawLevel();
       }
-        }
-     
-
+      }
+      if (keyCode == LEFT) {
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
+          this.playerLocation = attemptLoc;
+          drawLevel();
+      }
+      }
+      if (keyCode == RIGHT) {
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
+          this.playerLocation = attemptLoc;
+          drawLevel();
+      }
+    }
   }
  
   boolean nextLevelScene() {
