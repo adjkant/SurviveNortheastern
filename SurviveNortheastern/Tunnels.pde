@@ -48,6 +48,7 @@ class Tunnels {
   }
   
   void generateAdjacencyList() {
+    this.adjacencyList = new HashMap<PVector, ArrayList<PVector>>();
     for (Building b : this.buildings) {
       PVector pos = new PVector(b.x, b.y);
       ArrayList<PVector> adj = this.findAdjacentMoves(pos);
@@ -62,7 +63,7 @@ class Tunnels {
   }
   
   private ArrayList<PVector> findAdjacentMoves(PVector position) {
-    ArrayList<PVector> results = new ArrayList<>();
+    ArrayList<PVector> results = new ArrayList<PVector>();
     
     // Check buildings
     for (Building b : this.buildings) {
