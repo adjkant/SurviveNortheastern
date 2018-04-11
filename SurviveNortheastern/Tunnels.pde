@@ -240,6 +240,20 @@ class Tunnels {
   40, 17 = mugar
   */
   
+  private void addVerticalPath(int topLeft, int bottomLeft, int x) {
+    for(int i = topLeft; i <= bottomLeft; i++) {
+      this.paths.add(new Path(x, i, grey));
+      this.paths.add(new Path(x + 1 , i, grey));
+    }
+  }
+  
+  private void addHorizontalPath(int bottomLeft, int bottomRight, int y) {
+    for(int i = bottomLeft; i <= bottomRight; i++) {
+      this.paths.add(new Path(i, y - 1, grey));
+      this.paths.add(new Path(i, y, grey));
+    }
+  }
+  
   private void addSnellEngineering() {
     String snellEngineeringLabel = "SE";
     
@@ -284,36 +298,10 @@ class Tunnels {
   
   private void addCH() {
     //add churchill
-    this.paths.add(new Path(12, 22, grey));
-    this.paths.add(new Path(13, 22, grey));
+    addHorizontalPath(12, 13, 22);
     
     //add snell
-    this.paths.add(new Path(20, 31, grey));
-    this.paths.add(new Path(21, 30, grey));
-    this.paths.add(new Path(20, 30, grey));
-    this.paths.add(new Path(21, 31, grey));
-    this.paths.add(new Path(21, 29, grey));
-    this.paths.add(new Path(20, 29, grey));
-    this.paths.add(new Path(21, 28, grey));
-    this.paths.add(new Path(20, 28, grey));
-    this.paths.add(new Path(21, 27, grey));
-    this.paths.add(new Path(21, 26, grey));
-    this.paths.add(new Path(21, 25, grey));
-    this.paths.add(new Path(21, 24, grey));
-    this.paths.add(new Path(21, 23, grey));
-    this.paths.add(new Path(21, 22, grey));
-    this.paths.add(new Path(21, 21, grey));
-    this.paths.add(new Path(21, 20, grey));
-    this.paths.add(new Path(20, 27, grey));
-    this.paths.add(new Path(20, 26, grey));
-    this.paths.add(new Path(20, 25, grey));
-    this.paths.add(new Path(20, 24, grey));
-    this.paths.add(new Path(20, 23, grey));
-    this.paths.add(new Path(20, 22, grey));
-    this.paths.add(new Path(20, 21, grey));
-    this.paths.add(new Path(20, 20, grey));
-    this.paths.add(new Path(19, 20, grey));
-    this.paths.add(new Path(19, 21, grey));
+    addVerticalPath(20, 31, 20);
     
     //addHayden
     this.paths.add(new Path(20, 19, grey));
@@ -375,34 +363,7 @@ class Tunnels {
     this.paths.add(new Path(30, 13, grey));
     
     //add curry
-    this.paths.add(new Path(31, 14, grey));
-    this.paths.add(new Path(31, 15, grey));
-    this.paths.add(new Path(31, 16, grey));
-    this.paths.add(new Path(31, 17, grey));
-    this.paths.add(new Path(31, 18, grey));
-    this.paths.add(new Path(31, 19, grey)); 
-    this.paths.add(new Path(31, 20, grey)); 
-    this.paths.add(new Path(31, 21, grey)); 
-    this.paths.add(new Path(31, 22, grey)); 
-    this.paths.add(new Path(31, 23, grey)); 
-    this.paths.add(new Path(31, 24, grey)); 
-    this.paths.add(new Path(31, 25, grey)); 
-    this.paths.add(new Path(31, 26, grey)); 
-    this.paths.add(new Path(31, 27, grey)); 
-    this.paths.add(new Path(32, 14, grey));
-    this.paths.add(new Path(32, 15, grey));
-    this.paths.add(new Path(32, 16, grey));
-    this.paths.add(new Path(32, 17, grey));
-    this.paths.add(new Path(32, 18, grey));
-    this.paths.add(new Path(32, 19, grey)); 
-    this.paths.add(new Path(32, 20, grey)); 
-    this.paths.add(new Path(32, 21, grey)); 
-    this.paths.add(new Path(32, 22, grey)); 
-    this.paths.add(new Path(32, 23, grey)); 
-    this.paths.add(new Path(32, 24, grey)); 
-    this.paths.add(new Path(32, 25, grey)); 
-    this.paths.add(new Path(32, 26, grey)); 
-    this.paths.add(new Path(32, 27, grey)); 
+    addVerticalPath(14, 27, 31);
 
 
     // add Mugar
