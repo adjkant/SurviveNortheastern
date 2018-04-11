@@ -39,21 +39,21 @@ class Level {
       }
     }
       if (keyCode == DOWN) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y + 1);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
       }
       }
       if (keyCode == LEFT) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x - 1, playerLocation.y);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
       }
       }
       if (keyCode == RIGHT) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x + 1, playerLocation.y);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
