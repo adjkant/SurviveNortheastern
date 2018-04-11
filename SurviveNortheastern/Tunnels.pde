@@ -485,7 +485,6 @@ class Tunnels {
     this.paths.add(new Path(4, 23, grey));
     this.paths.add(new Path(4, 22, grey));
     this.paths.add(new Path(4, 21, grey));
-    this.paths.add(new Path(4, 21, grey));
     this.paths.add(new Path(4, 20, grey));
     
     this.paths.add(new Path(3, 28, grey));

@@ -1,7 +1,7 @@
 
 
 class Level { 
-  int PLAYER_SIZE = 20;
+  int PLAYER_SIZE = 15;
   ArrayList<String> cutScenes;
   int cutScenePlace;
   PVector playerLocation;
@@ -18,7 +18,7 @@ class Level {
     this.items = items;
     this.tunnels = tunnels;
     fill(120, 20, 30);
-    this.playerShape = createShape(ELLIPSE, 0, 0, PLAYER_SIZE, PLAYER_SIZE);
+    this.playerShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
   
   void drawLevel() {
@@ -27,7 +27,7 @@ class Level {
   }
   
   void drawPlayer() {
-    new Drawing().drawShapeCenter(this.playerShape, (int) playerLocation.x * PLAYER_SIZE, (int) playerLocation.y * PLAYER_SIZE, 0);
+    new Drawing().drawShapeCenter(this.playerShape, (int) playerLocation.x * SQUARE_SIZE, (int) playerLocation.y * SQUARE_SIZE, 0);
   }
   
   void attemptMove(int keyCode) {
@@ -39,21 +39,21 @@ class Level {
       }
     }
       if (keyCode == DOWN) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y + 1);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
       }
       }
       if (keyCode == LEFT) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x - 1, playerLocation.y);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
       }
       }
       if (keyCode == RIGHT) {
-      PVector attemptLoc = new PVector (playerLocation.x, playerLocation.y - 1);
+      PVector attemptLoc = new PVector (playerLocation.x + 1, playerLocation.y);
       if (this.tunnels.isValidMove(playerLocation, attemptLoc)) {
           this.playerLocation = attemptLoc;
           drawLevel();
