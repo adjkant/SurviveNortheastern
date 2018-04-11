@@ -11,7 +11,7 @@ void settings() {
 void setup() {
   ArrayList<Level> levels = new ArrayList<Level>();
   levels.add(new Level(new ArrayList(Arrays.asList("Test 1", "Test 2")), 
-             10, 10, 
+             12, 20, 
              new ArrayList<Enemy>(), 
              new ArrayList<Item>()));
   game = new Game(levels);
