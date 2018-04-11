@@ -1,6 +1,9 @@
 import java.util.*;
 
 static final int GAME_SIZE = 800;
+int PLAYER_SIZE = 15;
+int SQUARE_SIZE = 20;
+int NUM_SQUARES_LENGTH = GAME_SIZE / SQUARE_SIZE; 
 
 Game game;
 
@@ -12,15 +15,23 @@ void setup() {
   ArrayList<Level> levels = new ArrayList<Level>();
   levels.add(new Level(new ArrayList(Arrays.asList("Test 1", "Test 2")), 
              12, 20, 
-             new ArrayList<Enemy>(), 
+             new ArrayList<Enemy>(Arrays.asList(new ProfessorEnemy(5, 27))), 
              new ArrayList<Item>(),
              new Tunnels()));
   game = new Game(levels);
 }
 
 void draw() {
-  background(0, 0, 0);
-  game.drawGame();
+  try {
+    // Enemy Actions
+    game.actEnemies();
+    
+    // Drawing
+    background(0, 0, 0);
+    game.drawGame();
+  } catch (LevelNotFoundException e) {
+    e.printStackTrace();
+  }
 }
 
 void keyPressed() {
@@ -29,14 +40,11 @@ void keyPressed() {
     if (key == CODED && curLevel.isPlaying()) { 
       if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
         curLevel.attemptMove(keyCode);
-        println("arrow pressed");
       }
-    } else {
-      println("Not playing");
     }
     
     if (key == ' ') {
-        println(curLevel.nextLevelScene());
+        curLevel.nextLevelScene();
     }
     
   } catch (LevelNotFoundException e) {
@@ -57,7 +65,6 @@ class Game {
   }
   
   void drawGame() {
-    this.tunnels.drawTunnels();
     this.drawCurrentLevel();
   }
   
@@ -75,5 +82,9 @@ class Game {
     } else {
       throw new LevelNotFoundException();
     }
+  }
+  
+  void actEnemies() throws LevelNotFoundException {
+    getCurrentLevel().actEnemies();
   }
 }

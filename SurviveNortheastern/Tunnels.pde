@@ -3,9 +3,6 @@ int GRID_HEIGHT_LINES = 8; //number of horizontal lines
 int GRID_WIDTH_SIZE = (GAME_SIZE / GRID_WIDTH_LINES); // space between vertical lines
 int GRID_HEIGHT_SIZE =(GAME_SIZE / GRID_HEIGHT_LINES); // space between horizontal lines
 
-int SQUARE_SIZE = 20;
-int NUM_SQUARES_LENGTH = GAME_SIZE / SQUARE_SIZE; 
-
 PVector grey = new PVector(193,193,193);
   
 class Tunnels {
@@ -45,6 +42,10 @@ class Tunnels {
   boolean isValidMove(PVector loc, PVector newLoc) {
     ArrayList<PVector> validMoves = this.adjacencyList.get(loc);
     return validMoves.contains(newLoc);
+  }
+  
+  ArrayList<PVector> adjacentSpaces(PVector loc) {
+    return this.adjacencyList.get(loc);
   }
   
   void generateAdjacencyList() {
