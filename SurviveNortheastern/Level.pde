@@ -101,6 +101,12 @@ class Level {
     }
   }
   
+  void applyPowers() {
+    for(Enemy e : this.enemies) {
+      e.powers(this);
+    }
+  }
+  
   void removeItems() {
     Iterator<Item> iter = this.items.iterator();
     while (iter.hasNext()) {

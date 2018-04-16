@@ -30,8 +30,9 @@ abstract class Enemy {
     } else {
       this.actTimer += 1;
     }
-    
   }
+  
+  abstract void powers(Level l);
   
   void drawEnemy() {
     new Drawing().drawShapeCenter(this.enemyShape, (int) this.x * SQUARE_SIZE, (int) this.y * SQUARE_SIZE, 0);
@@ -45,5 +46,9 @@ class ProfessorEnemy extends Enemy {
     fill(0, 255, 0);
     stroke(0, 0, 0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
+  }
+  
+  void powers(Level l) {
+    
   }
 }

@@ -78,6 +78,7 @@ void draw() {
     if (l.isPlaying() && !l.isOver()) {
       // Enemy Actions
       l.actEnemies();
+      l.applyPowers();
     } else {
       // Game Ended or In Cutscene Mode
     }
