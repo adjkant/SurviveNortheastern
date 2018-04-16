@@ -16,7 +16,7 @@ abstract class Enemy {
     this.actRate = actRate;
     this.actTimer = 0;
   }
-  
+
   Enemy(Task behavior) {
     this.behaviorTree = behavior;
     this.x = 0;
