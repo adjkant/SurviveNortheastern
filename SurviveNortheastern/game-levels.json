@@ -1,0 +1,46 @@
+[
+	{
+		"Cut Scenes": [
+			"Test 1",
+			"Test 2",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [0, 0, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Test 3",
+			"Test 4",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	}
+]

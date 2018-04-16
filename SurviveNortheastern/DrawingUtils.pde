@@ -3,13 +3,8 @@ public class Drawing {
   
   public Drawing() {}
   
-  void drawSquare(int xGrid, int yGrid, PVector c) {
-    stroke(c.x, c.y, c.z);
-    fill(c.x, c.y, c.z);
-    drawShapeCenter(createShape(RECT, -SQUARE_SIZE/2, -SQUARE_SIZE/2, SQUARE_SIZE, SQUARE_SIZE), 
-                    xGrid * SQUARE_SIZE - SQUARE_SIZE/2, 
-                    yGrid * SQUARE_SIZE - SQUARE_SIZE/2, 
-                    0);
+  void drawSquare(PShape s, int xGrid, int yGrid) {
+    drawShapeCenter(s, xGrid * SQUARE_SIZE - SQUARE_SIZE/2, yGrid * SQUARE_SIZE - SQUARE_SIZE/2, 0);
   }
   
   // Draw a shape centered on x and y at angle degrees
