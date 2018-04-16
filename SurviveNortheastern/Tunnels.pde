@@ -102,14 +102,14 @@ class Tunnels {
   
   void drawBuildings() {
     for (Building b : this.buildings) {
-      this.drawer.drawSquare(b.x, b.y, b.c);
+      this.drawer.drawSquare(b.s, b.x, b.y);
       //text(b.name, 50, 50);
     }
   }
   
   void drawPaths() {
     for (Path p : this.paths) {
-      this.drawer.drawSquare(p.x, p.y, p.c);
+      this.drawer.drawSquare(p.s, p.x, p.y);
     }
   }
   
@@ -571,11 +571,14 @@ class Path {
   int x;
   int y;
   PVector c;
+  PShape s;
   
   Path(int x, int y, PVector c) {
     this.x = x;
     this.y = y;
-    this.c = c;
+    stroke(c.x, c.y, c.z);
+    fill(c.x, c.y, c.z);
+    this.s = createShape(RECT, -SQUARE_SIZE/2, -SQUARE_SIZE/2, SQUARE_SIZE, SQUARE_SIZE);
   }
   
 }

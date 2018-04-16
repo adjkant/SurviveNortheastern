@@ -43,6 +43,7 @@ class ProfessorEnemy extends Enemy {
   ProfessorEnemy(int x, int y) {
     super(x, y, new ProfessorBehavior(), 20);
     fill(0, 255, 0);
+    stroke(0, 0, 0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
 }
