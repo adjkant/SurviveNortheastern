@@ -1,4 +1,5 @@
 import java.util.*;
+import java.time.Instant;
 
 static final int GAME_SIZE = 800;
 int PLAYER_SIZE = 15;
@@ -6,6 +7,9 @@ int SQUARE_SIZE = 20;
 int NUM_SQUARES_LENGTH = GAME_SIZE / SQUARE_SIZE; 
 
 Game game;
+
+long endTimer = 0;
+int WIN_SHOW_TIME = 20;
 
 void settings() {
   size(GAME_SIZE, GAME_SIZE);
@@ -63,15 +67,8 @@ void setup() {
     index++;
   }
   
+  // Create full game from levels
   game = new Game(levels);
-  
-  //ArrayList<Level> levelss = new ArrayList<Level>();
-  //levelss.add(new Level(new ArrayList(Arrays.asList("Test 1", "Test 2")), 
-  //           12, 20, 
-  //           new ArrayList<Enemy>(Arrays.asList(new ProfessorEnemy(5, 27))), 
-  //           new ArrayList<Item>(Arrays.asList(new Item(12, 12, new PVector(0, 0, 255)))),
-  //           new Tunnels()));
-  //game = new Game(levelss);
 }
 
 void draw() {
@@ -82,12 +79,27 @@ void draw() {
       // Enemy Actions
       l.actEnemies();
     } else {
-      // In Cutscene Modem
+      // Game Ended or In Cutscene Mode
     }
     
     // Drawing
-    background(0, 0, 0);
-    game.drawGame();
+    if (game.isWon()) {
+      background(0, 0, 0);
+      fill(255);
+      stroke(255);
+      textSize(30);
+      text("Game Won!", 300, 400);
+      if (endTimer == 0) {
+        endTimer = Instant.now().getEpochSecond() + WIN_SHOW_TIME;
+      } else {
+        if (endTimer < Instant.now().getEpochSecond()) {
+          System.exit(0);
+        }
+      }
+    } else {
+      background(0, 0, 0);
+      game.drawGame();
+    }
     
   } catch (LevelNotFoundException e) {
     e.printStackTrace();
@@ -97,14 +109,25 @@ void draw() {
 void keyPressed() {
   try {
     Level curLevel = game.getCurrentLevel();
-    if (key == CODED && curLevel.isPlaying()) { 
+    if (key == CODED && curLevel.isPlaying() && !curLevel.isOver()) { 
       if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
         curLevel.attemptMove(keyCode);
+        curLevel.removeItems();
       }
     }
     
     if (key == ' ') {
+      if (curLevel.isOver() && curLevel.isWon()) {
+        game.nextLevel();
+      } else if (curLevel.isOver()) {
+        curLevel.restartLevel();
+      } else {
         curLevel.nextLevelScene();
+      }
+    }
+    
+    if (key == 'r') {
+      curLevel.restartLevel();
     }
     
   } catch (LevelNotFoundException e) {
@@ -124,7 +147,7 @@ class Game {
     this.currentLevel = 1;
   }
   
-  void drawGame() {
+  void drawGame() throws LevelNotFoundException {
     this.drawCurrentLevel();
   }
   
@@ -136,10 +159,25 @@ class Game {
     }
   }
   
-  private Level getCurrentLevel() throws LevelNotFoundException {
+  Level getCurrentLevel() throws LevelNotFoundException {
     if (this.levels.size() >= this.currentLevel) {
       return this.levels.get(this.currentLevel - 1);
     } else {
       throw new LevelNotFoundException();
     }
-  };}
+  }
+  
+  boolean nextLevel() {
+    if (this.currentLevel < this.levels.size()) {
+      this.currentLevel += 1;
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  boolean isWon() throws LevelNotFoundException {
+    return this.levels.size() == this.currentLevel && this.getCurrentLevel().isWon();
+  }
+
+}

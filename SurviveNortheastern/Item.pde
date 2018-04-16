@@ -13,6 +13,12 @@ class Item {
     this.s = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
   
+  Item(int x, int y, PShape s) {
+    this.x = x;
+    this.y = y;
+    this.s = s;
+  }
+  
   void drawItem() {
     new Drawing().drawShapeCenter(this.s, this.x * SQUARE_SIZE, this.y * SQUARE_SIZE, 0);
   }
