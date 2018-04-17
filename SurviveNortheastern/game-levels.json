@@ -7,8 +7,8 @@
 			"Welcome to your last semester! You’ve gone through over four years of classes and co-op, and it’s about time you blew this popsicle stand. Unfortunately, you’re missing some vaccinations, and there’s no way UHCS will be any help. Luckily, you’ve gotten word that there the exact vaccines you need are scattered around the tunnels! Lucky you! Now’s the time to find them before I am Here messes up your senior year.",
 			"Avoid the boring professors (chartruse dots) as they will put you to sleep with their lectures, making you move slower and slowly die."
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 34,
 		"Enemies": [
 			{
 				"Type": "PROF",
@@ -23,21 +23,21 @@
 		"Items": [
 			{
 				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 7,
+				"Y": 30,
+				"Color": [242, 191, 191]
 			},
 			{
 				"Name": "Vaccine",
-				"X": 13,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 12,
+				"Y": 20,
+				"Color": [242, 191, 191]
 			},
 			{
 				"Name": "Vaccine",
 				"X": 14,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [242, 191, 191]
 			}
 		]
 	},
@@ -56,7 +56,7 @@
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Reception",
 				"X": 12,
 				"Y": 12,
 				"Color": [0, 0, 255]
