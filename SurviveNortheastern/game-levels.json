@@ -286,7 +286,7 @@
 			{
 				"Type": "PROF",
 				"X": 32,
-				"Y": 11,
+				"Y": 12,
 				"Speed": 90,
 				"Range": 6,
 				"HurtPower": 0.08,
