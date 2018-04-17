@@ -491,7 +491,11 @@
 			{
 				"Type": "DRAGAOUN",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Power": 1,
+				"Range": 12,
+				"Speed": 100,
+				"Power Frequency": 20
 			}
 		],
 		"Items": [

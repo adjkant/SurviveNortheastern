@@ -71,8 +71,8 @@ class RAEnemy extends  Enemy {
 }
 
 class DragaounEnemy extends Enemy {
-  DragaounEnemy(int x, int y) {
-    super(x, y, new DragaounBehavior(), 40);
+  DragaounEnemy(int x, int y, int range, float power, int speed, int powerFrequency) {
+    super(x, y, new DragaounBehavior(range, power, powerFrequency), speed);
     fill(0, 255, 0);
     stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
