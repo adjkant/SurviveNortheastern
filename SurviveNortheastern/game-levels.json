@@ -144,7 +144,14 @@
 				"X": 5,
 				"Y": 27,
 				"Range": 4,
-				"Power": 0.1
+				"Power": 0.3
+			},
+			{
+				"Type": "NUWAVE",
+				"X": 24,
+				"Y": 17,
+				"Range": 4,
+				"Power": 0.3
 			}
 		],
 		"Items": [
@@ -200,6 +207,13 @@
 				"Power 1": 1,
 				"Power 2": 1,
 				"Power 3": 10
+			},
+			{
+				"Type": "NUWAVE",
+				"X": 35,
+				"Y": 13,
+				"Range": 4,
+				"Power": 0.3
 			}
 		],
 		"Items": [
@@ -232,6 +246,15 @@
 				"X": 24,
 				"Y": 17,
 				"Bite Power": 6
+			},
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27,
+				"Speed": 90,
+				"Range": 6,
+				"HurtPower": 0.08,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
@@ -304,6 +327,25 @@
 				"Y": 27,
 				"Range": 4,
 				"Power": 0.1
+			},
+			{
+				"Type": "RA",
+				"X": 24,
+				"Y": 17,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 9,
+				"Power 2": 9,
+				"Power 3": 20
+			},
+			{
+				"Type": "PROF",
+				"X": 32,
+				"Y": 13,
+				"Speed": 90,
+				"Range": 6,
+				"HurtPower": 0.08,
+				"SlowPower": 0.04,
 			}
 		],
 		"Items": [
@@ -406,6 +448,12 @@
 				"Range": 5,
 				"HurtPower": 0.45,
 				"SlowPower": 0.02,
+			},
+			{
+				"Type": "HUSKY",
+				"X": 9,
+				"Y": 20,
+				"Bite Power": 5
 			}
 		],
 		"Items": [
@@ -489,19 +537,61 @@
 		"Enemies": [
 			{
 				"Type": "PROF",
-				"X": 5,
-				"Y": 27,
+				"X": 15,
+				"Y": 20,
 				"Speed": 80,
 				"Range": 5,
 				"HurtPower": 0.5,
-				"SlowPower": 0.02,
+				"SlowPower": 0.03,
+			},
+			{
+				"Type": "HUSKY",
+				"X": 8,
+				"Y": 33,
+				"Bite Power": 8
+			},
+			{
+				"Type": "NUWAVE",
+				"X": 20,
+				"Y": 33,
+				"Range": 4,
+				"Power": 0.1
+			},
+			{
+				"Type": "RA",
+				"X": 32,
+				"Y": 13,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 3,
+				"Power 2": 4,
+				"Power 3": 6
 			}
+
 		],
 		"Items": [
 			{
 				"Name": "Revolutionizing the industry job # 1",
-				"X": 12,
-				"Y": 12,
+				"X": 30,
+				"Y": 27,
+				"Color": [106, 230, 255]
+			},
+			{
+				"Name": "Revolutionizing the industry job # 2",
+				"X": 40,
+				"Y": 17,
+				"Color": [106, 230, 255]
+			},
+			{
+				"Name": "Great resume builder",
+				"X": 40,
+				"Y": 5,
+				"Color": [106, 230, 255]
+			},
+			{
+				"Name": "Camp counselor",
+				"X": 25,
+				"Y": 5,
 				"Color": [106, 230, 255]
 			}
 		]
