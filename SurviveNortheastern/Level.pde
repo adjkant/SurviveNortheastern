@@ -234,9 +234,13 @@ class Level {
     this.playerHealth = l.playerHealth;
     this.cutScenePlace = l.cutScenePlace;
     
-    for(int i = 0; i < this.enemies.size(); i++) {
+    while (l.enemies.size() != this.enemies.size()) {
+      this.enemies.add(new Enemy());
+    }
+    
+    for(int i = 0; i < l.enemies.size(); i++) {
       Enemy e = this.enemies.get(i);
-      Enemy ce = this.enemies.get(i);
+      Enemy ce = l.enemies.get(i);
       e.x = ce.x;
       e.y = ce.y;
     }

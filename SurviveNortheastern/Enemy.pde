@@ -1,6 +1,6 @@
 
 
-abstract class Enemy {
+class Enemy {
   int x;
   int y;
   Task behaviorTree;
@@ -8,6 +8,8 @@ abstract class Enemy {
   
   int actTimer;
   int actRate;
+  
+  Enemy() {}
   
   Enemy(int x, int y, Task behavior, int actRate) {
     this.x = x;
