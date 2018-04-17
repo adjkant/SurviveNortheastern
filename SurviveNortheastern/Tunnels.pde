@@ -56,9 +56,6 @@ class Tunnels {
       PVector n =  new PVector(b.x, b.y);
       if (this.isNeighbor(position, n)) {
         results.add(n);
-        if (results.size() == 4) {
-          return results;
-        }
       }
     }
     
@@ -67,9 +64,6 @@ class Tunnels {
       PVector n =  new PVector(p.x, p.y);
       if (this.isNeighbor(position, n)) {
         results.add(n);
-        if (results.size() == 4) {
-          return results;
-        }
       }
     }
     
@@ -113,9 +107,7 @@ class Tunnels {
   }
   
   void addAllPaths() {
-    addFtoSE();
-    addFtoSNE();
-    addCH();
+    addPaths();
   }
   // Building Additions
   
@@ -217,7 +209,7 @@ class Tunnels {
     String snellEngineeringLabel = "SE";
     
     PVector blue = new PVector (0, 0, 255);
-    addBuilding(7, 34, blue, snellEngineeringLabel);
+    //addBuilding(7, 34, blue, snellEngineeringLabel);
     addBuilding(7, 36, blue, snellEngineeringLabel);
     addBuilding(7, 38, blue, snellEngineeringLabel);
     addBuilding(3, 35, blue, snellEngineeringLabel);
@@ -233,7 +225,7 @@ class Tunnels {
   
   // Path Additions
   
-  private void addCH() {
+  private void addPaths() {
     //add churchill
     addHorizontalPath(12, 13, 22);
     
@@ -262,17 +254,13 @@ class Tunnels {
     
     // add dodge
     addVerticalPath(4, 11, 37);
-}
-  
-  private void addFtoSE() {   
+    
     // Forsyth to Snell Engineering
     addVerticalPath(20, 28, 3);
     addHorizontalPath(5, 8, 28);
-    addVerticalPath(28, 33, 7);
-  }
-  
-  private void addFtoSNE() {
-    addHorizontalPath(4, 19, 21);
+    addVerticalPath(28, 34, 7);
+    
+    addHorizontalPath(5, 19, 21);
   }
 }
 

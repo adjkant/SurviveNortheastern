@@ -1,8 +1,50 @@
 [
 	{
 		"Cut Scenes": [
-			"Test 1",
-			"Test 2",
+			"Survive Northeastern",
+			"Controls: Arrow Keys",
+			"Welcome to your last semester! You’ve gone through over four years of classes and co-op, and it’s about time you blew this popsicle stand. Unfortunately, you’re missing some vaccinations, and there’s no way UHCS will be any help. Luckily, you’ve gotten word that there the exact vaccines you need are scattered around the tunnels! Lucky you! Now’s the time to find them before I am Here messes up your senior year."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			},
+			{
+				"Type": "HUSKY",
+				"X": 5,
+				"Y": 27
+			},
+			{
+				"Type": "NUWAVE",
+				"X": 5,
+				"Y": 27
+			},
+			{
+				"Type": "RA",
+				"X": 5,
+				"Y": 27
+			},
+			{
+				"Type": "DRAGAOUN",
+				"X": 5,
+				"Y": 27
+			},
+		],
+		"Items": [
+			{
+				"X": 12,
+				"Y": 12,
+				"Color": [0, 0, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Vaccines in hand, you triumphantly pull up your phone to log onto myNortheastern. But you can’t get NUWave from the tunnels, and you’re locked in for the night! Quick! Find a place your phone gets reception before midnight hits!"
 		],
 		"Player X": 12,
 		"Player Y": 20,
@@ -17,14 +59,400 @@
 			{
 				"X": 13,
 				"Y": 20,
-				"Color": [0, 0, 255]
+				"Color": [255, 255, 255]
 			}
 		]
 	},
 	{
 		"Cut Scenes": [
-			"Test 3",
-			"Test 4",
+			"Finally, after wedging yourself between two lockers near Rebecca's, you connect to the internet. At 12:01. All of your classes have been dropped. Luckily, the registrar decided to drop the classes in the tunnels. Quick! Find all your classes before someone else does!"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Apply To Graduate",
+			"Now that your schedule is set, it’s time we tell the administration you’re graduating. All you have to do is find the right link on myNortheastern - that’s easy, right? Not after this redesign. All of the links are scattered everywhere - find the right one!",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Sadly, the link is broken. You’ve gotta go talk to your advisor, who, as always, recently moved offices into Nightingale Hall. No mortal can enter Nightingale and find what they are looking for without very good directions. Luckily, your friend who graduated last year knows the way and wrote his directions in code on the back of a Rebecca's sandwich he stashed in the runnels and forgot about. If you want to graduate, you’re going to have to find that sandwich…"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"The codes look good! You sprint to Nightingale, but right as you start heading up above ground in Forsyth, you get an email: your advisor’s been switched again! Find their office in the tunnels."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Financial Aid",
+			"Finally, your advisor gives you the go ahead. But they also notice that your financial aid has been cancelled, and your bill is due next week. Time to scour the tunnels for money!",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Even after 3 days of searching the tunnels, you only managed to collect $23. That’s not going to cut it. Maybe if you forge your FAFSA they will give you more money, right? We should find some high quality forgery tools if this is going to work..."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Alas, even with the best tools, you still have no idea how to properly doctor the document. Guess you should have thought of that before…",
+			"So, how can you make money? It hits you! The entrepreneurial spirit! You did notice a ton of discarded Canada Goose jackets around the tunnels, that has to be worth something, right? Let’s collect those!",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Now that you have your product, it’s time to visit the IDEA lab and find your cofounder and develop your website"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Despite your success in business, D’Amore and McKim are not pleased with your rogue business model and are working to expel you, if only they can find you. Run!"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"UHCS",
+			"Well, you survived and paid for school, but now they’re asking you to “go to class” and “take exams”. Time to get sick to avoid responsibility! Catch the flu in the tunnels!",
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Congrats, you got it! Unfortunately, it’s pretty bad this year and you probably need a doctor. Luckily there’s UHCS, always there for you. If only you could find the the mythical UHCS appointment - it’s probably somewhere down here like everything else, right?"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"You climb up from Forsyth, appointment card in hand, only to get the news - the doctor has been lost in the tunnels all week! Time to find them I guess..."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"OSCRR",
+			"Well, it turns out you would have to take the exam eventually, and now OSCRR is on your back for “cheating” or whatever. There’s probably a good excuse hanging around in the tunnels..."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"OSCRR didn’t bite, and they are trying to force a failing grade in the class. But, there’s a way out apparently - The Ghost of Taco Bell knows it."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"The Ghost of Taco Bell says there are 5 hidden Dorito Loco tacos still in the tunnels, and that OSCRR board members have been known to accept them as bribes before. I guess it’s the only shot, right?"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"The Appointment",
+			"Things are going well. UHCS calls you in for an appointment. And it’s timely, in the afternoon tomorrow! This is nice!",
+			"They run tests, and no one will tell you why. You wait for hours. The doctor gives you the papers to say you’re all set and healthy. Nothing is wrong. It was a false alarm, probably just remnants from the flu. You then explode. Guess something else was wrong. Lost a life.",
+			"Find A Job",
+			"Well, it looks like you’re going to graduate! You probably need a job after, right? Maybe you should look for one of those. You’ll need a suit, otherwise interviewers won’t talk to you."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Great, all suited up. You could talk to them, but it’s probably a good idea to have your resume ready. Everything looks good except for your education section - the automated servers won’t accept your resume unless the college name is formatted just right. You must seek the one true Northeastern University name disciple in order to find out how one can truly pass through the filter."
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Suited up and carrying your correct resume, this should be easy! Just go talk to employers at the tables!"
+		],
+		"Player X": 12,
+		"Player Y": 20,
+		"Enemies": [
+			{
+				"Type": "PROF",
+				"X": 5,
+				"Y": 27
+			}
+		],
+		"Items": [
+			{
+				"X": 13,
+				"Y": 20,
+				"Color": [255, 255, 255]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Well, you’ve made it. There’s just one problem. Aoun has gotten word of your last semester, between your rogue business, disregard for school disciplinary policies, and your general addition (come on, you need it to survive, it’s an addition) to drugs and alcohol. He’s decided to put an end to you. His only Kryptonite? The US News rankings. Find a way to lower his rank below 100 and slay The Dragaoun to get your diploma."
 		],
 		"Player X": 12,
 		"Player Y": 20,

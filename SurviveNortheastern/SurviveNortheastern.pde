@@ -9,7 +9,7 @@ int NUM_SQUARES_LENGTH = GAME_SIZE / SQUARE_SIZE;
 Game game;
 
 long endTimer = 0;
-int WIN_SHOW_TIME = 20;
+int WIN_SHOW_TIME = 30;
 
 void settings() {
   size(GAME_SIZE, GAME_SIZE);
@@ -40,8 +40,17 @@ void setup() {
       // Add enemy
       if (enemyJSON.getString("Type").equals("PROF")) {
         enemies.add(new ProfessorEnemy(x, y));
+      } else if (enemyJSON.getString("Type").equals("HUSKY")) {
+        enemies.add(new HuskyEnemy(x, y));
+      } else if (enemyJSON.getString("Type").equals("NUWAVE")) {
+        enemies.add(new NUWaveEnemy(x, y));
+      } else if (enemyJSON.getString("Type").equals("RA")) {
+        enemies.add(new RAEnemy(x, y));
+      } else if (enemyJSON.getString("Type").equals("DRAGAOUN")) {
+        enemies.add(new DragaounEnemy(x, y));
+      } else {
+        println("Invalid Enemy");
       }
-      
       
       eIndex++;
     }
@@ -74,11 +83,12 @@ void setup() {
 void draw() {
   try {
     Level l = game.getCurrentLevel();
+    println(l.playerLocation);
+    println(l.tunnels.adjacentSpaces(l.playerLocation));
     
     if (l.isPlaying() && !l.isOver()) {
       // Enemy Actions
       l.actEnemies();
-      l.applyPowers();
     } else {
       // Game Ended or In Cutscene Mode
     }
@@ -89,7 +99,7 @@ void draw() {
       fill(255);
       stroke(255);
       textSize(30);
-      text("Game Won!", 300, 400);
+      text("You Graduated!", 300, 400);
       if (endTimer == 0) {
         endTimer = Instant.now().getEpochSecond() + WIN_SHOW_TIME;
       } else {

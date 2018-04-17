@@ -32,52 +32,52 @@ abstract class Enemy {
     }
   }
   
-  abstract void powers(Level l);
-  
   void drawEnemy() {
     new Drawing().drawShapeCenter(this.enemyShape, (int) this.x * SQUARE_SIZE, (int) this.y * SQUARE_SIZE, 0);
   }
 }
 
 class ProfessorEnemy extends Enemy {
-  
   ProfessorEnemy(int x, int y) {
-    super(x, y, new ProfessorBehavior(), 20);
-    fill(0, 255, 0);
-    stroke(0, 0, 0);
+    super(x, y, new ProfessorBehavior(), 80);
+    fill(147, 165, 101);
+    stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
-  }
-  
-  void powers(Level l) {
-    
   }
 }
 
 class HuskyEnemy extends Enemy {
-  
   HuskyEnemy(int x, int y) {
-    super(x, y, new HuskyBehavior(), 20);
-    fill(141, 202, 239);
-    stroke(0, 0, 0);
+    super(x, y, new HuskyBehavior(), 15);
+    fill(181);
+    stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
-  }
-  
-  void powers(Level l) {
-    
   }
 }
 
-
-class DragounEnemy extends Enemy {
-  
-  DragounEnemy(int x, int y) {
-    super(x, y, new ProfessorBehavior(), 20);
-    fill(0, 255, 0);
-    stroke(0, 0, 0);
+class NUWaveEnemy extends Enemy {
+  NUWaveEnemy(int x, int y) {
+    super(x, y, new NUWaveBehavior(), 5);
+    fill(255, 241, 48);
+    stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
-  
-  void powers(Level l) {
-    
+}
+
+class RAEnemy extends  Enemy {
+  RAEnemy(int x, int y) {
+    super(x, y, new RABehavior(), 20);
+    fill(255, 0, 0);
+    stroke(255);
+    this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
+  }
+}
+
+class DragaounEnemy extends Enemy {
+  DragaounEnemy(int x, int y) {
+    super(x, y, new DragaounBehavior(), 40);
+    fill(0, 255, 0);
+    stroke(0);
+    this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
 }

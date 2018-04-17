@@ -1,4 +1,5 @@
 int MAX_HEALTH = 100;
+int LINE_LENGTH = 80;
 
 class Level { 
   Level originalLevel;
@@ -44,12 +45,16 @@ class Level {
   // Drawing
   
   void drawLevel() {
-    if (this.isPlaying()) {
+    if (this.isPlaying() && !this.isOver()) {
       this.tunnels.drawTunnels();
       this.drawPlayer();
       this.drawEnemies();
       this.drawItems();
       this.drawHealth();
+    } else if (this.isPlaying() && this.isWon()) {
+      this.drawLevelWon();
+    } else if (this.isOver() && !this.isWon()) {
+      this.drawLevelLost();
     } else {
       this.drawCutScene();
     }
@@ -73,6 +78,7 @@ class Level {
   }
   
   void drawHealth() {
+    textSize(15);
     fill(255);
     stroke(255);
     text("Health", 20, 20);
@@ -88,8 +94,50 @@ class Level {
   
   void drawCutScene() {
     background(0, 0, 0);
+    String content = this.cutScenes.get(this.cutScenePlace);
+    
+    int place = 0;
+    int lastWord = 0;
+    ArrayList<String> lines = new ArrayList<String>();
+    while (place < content.length()) {
+      if (place - lastWord > LINE_LENGTH && content.charAt(place) == ' ') {
+        lines.add(content.substring(lastWord, place));
+        lastWord = place + 1;
+      } else if (place == content.length() - 1) {
+        lines.add(content.substring(lastWord, place+1));
+      }
+      
+      // next place
+      place++;
+    }
+    
+    textSize(15);
     fill(255);
-    text(this.cutScenes.get(this.cutScenePlace), GAME_SIZE/2,GAME_SIZE/2);
+    for (int l = 0; l < lines.size(); l++) {
+      text(lines.get(l), 80, GAME_SIZE/2 - 100 + l * 20);
+    }
+    
+    drawContinuePrompt();
+  }
+  
+  void drawLevelWon() {
+    textSize(30);
+    fill(255);
+    text("Level Complete", GAME_SIZE/2 - 120, GAME_SIZE/3);
+    drawContinuePrompt();
+  }
+  
+  void drawLevelLost() {
+    textSize(30);
+    fill(255);
+    text("Level Lost", GAME_SIZE/2 - 90, GAME_SIZE/3);
+    drawContinuePrompt();
+  }
+  
+  void drawContinuePrompt() {
+    textSize(15);
+    fill(255);
+    text("Press Space To Continue", GAME_SIZE/2 - 100, GAME_SIZE - 100);
   }
   
   // ---------------------------------------------------------------------------------------------------------------------
@@ -98,12 +146,6 @@ class Level {
   void actEnemies() {
     for(Enemy e : this.enemies) {
       e.act(this);
-    }
-  }
-  
-  void applyPowers() {
-    for(Enemy e : this.enemies) {
-      e.powers(this);
     }
   }
   
@@ -177,12 +219,16 @@ class Level {
     for(Enemy e : l.enemies) {
       if (e instanceof ProfessorEnemy) {
         this.enemies.add(new ProfessorEnemy(e.x, e.y));
-        println("added prof enemy");
-
-      }
-      if (e instanceof HuskyEnemy) {
+      } else if (e instanceof HuskyEnemy) {
         this.enemies.add(new HuskyEnemy(e.x, e.y));
-        println("added husky enemy");
+      } else if (e instanceof NUWaveEnemy) {
+        this.enemies.add(new NUWaveEnemy(e.x, e.y));
+      } else if (e instanceof RAEnemy) {
+        this.enemies.add(new RAEnemy(e.x, e.y));
+      } else if (e instanceof DragaounEnemy) {
+        this.enemies.add(new DragaounEnemy(e.x, e.y));
+      } else {
+        println("Invalid Enemy");
       }
     }
     
