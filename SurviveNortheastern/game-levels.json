@@ -7,8 +7,8 @@
 			"Welcome to your last semester! You’ve gone through over four years of classes and co-op, and it’s about time you blew this popsicle stand. Unfortunately, you’re missing some vaccinations, and there’s no way UHCS will be any help. Luckily, you’ve gotten word that there the exact vaccines you need are scattered around the tunnels! Lucky you! Now’s the time to find them before I am Here messes up your senior year.",
 			"Avoid the boring professors (chartruse dots) as they will put you to sleep with their lectures, making you move slower and slowly die."
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 34,
 		"Enemies": [
 			{
 				"Type": "PROF",
@@ -18,32 +18,70 @@
 				"Range": 5,
 				"HurtPower": 0.05,
 				"SlowPower": 0.01,
+			},
+			{
+				"Type": "PROF",
+				"X": 20,
+				"Y": 12,
+				"Speed": 80,
+				"Range": 5,
+				"HurtPower": 0.05,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
 			{
 				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 7,
+				"Y": 30,
+				"Color": [242, 191, 191]
 			},
 			{
 				"Name": "Vaccine",
-				"X": 13,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 12,
+				"Y": 20,
+				"Color": [242, 191, 191]
 			},
 			{
 				"Name": "Vaccine",
 				"X": 14,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [242, 191, 191]
 			}
 		]
 	},
 	{
 		"Cut Scenes": [
-			"Vaccines in hand, you triumphantly pull up your phone to log onto myNortheastern. But you can’t get NUWave from the tunnels, and you’re locked in for the night! Quick! Find a place your phone gets reception before midnight hits!"
+			"Vaccines in hand, you triumphantly pull up your phone to log onto myNortheastern to apply for graduation. But you can’t get NUWave from the tunnels, and you’re locked in for the night! Quick! Find a place your phone gets reception before midnight hits!",
+			"Watch out for the RAs as they're trying to stop using your phone."
+		],
+		"Player X": 31,
+		"Player Y": 28,
+		"Enemies": [
+			{
+				"Type": "RA",
+				"X": 24,
+				"Y": 17
+			},
+			{
+				"Type": "RA",
+				"X": 2,
+				"Y": 23
+			}
+		],
+		"Items": [
+			{
+				"Name": "Reception",
+				"X": 8,
+				"Y": 34,
+				"Color": [235, 69, 56]
+			}
+		]
+	},
+	{
+		"Cut Scenes": [
+			"Finally, after wedging yourself between two lockers near Rebecca's, you connect to the internet. At 12:01. All of your classes have been dropped. Luckily, the registrar decided to drop the classes in the tunnels. Quick! Find all your classes before someone else does!",
+			"Unfortunately, the school mascot has mistaken your classes with delicious food. Avoid the Husky and be quick before the dog eats all your classes."
 		],
 		"Player X": 12,
 		"Player Y": 20,
@@ -56,32 +94,28 @@
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
-	{
-		"Cut Scenes": [
-			"Finally, after wedging yourself between two lockers near Rebecca's, you connect to the internet. At 12:01. All of your classes have been dropped. Luckily, the registrar decided to drop the classes in the tunnels. Quick! Find all your classes before someone else does!"
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
+				"Name": "That 8 AM class",
+				"X": 3,
+				"Y": 27,
+				"Color": [84, 90, 91]
+			},
 			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
+				"Name": "The class you wish you didn't leave to last semester",
+				"X": 40,
+				"Y": 17,
+				"Color": [84, 90, 91]
+			},
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "The class with more than 5 girls",
+				"X": 40,
+				"Y": 5,
+				"Color": [84, 90, 91]
+			},
+			{
+				"Name": "The only class you need higher than a D",
+				"X": 25,
+				"Y": 5,
+				"Color": [84, 90, 91]
 			}
 		]
 	},
@@ -94,17 +128,35 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "NUWAVE",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Link that mentions other important links",
+				"X": 1,
+				"Y": 23,
+				"Color": [143, 183, 165]
+			},
+			{
+				"Name": "Link that talks about great people who graduated from Northeastern",
+				"X": 32,
+				"Y": 24,
+				"Color": [143, 183, 165]
+			},
+			{
+				"Name": "Semi-useful link",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [143, 183, 165]
+			},
+			{
+				"Name": "Actual link to graduate",
+				"X": 24,
+				"Y": 15,
+				"Color": [143, 183, 165]
 			}
 		]
 	},
@@ -112,53 +164,34 @@
 		"Cut Scenes": [
 			"Sadly, the link is broken. You’ve gotta go talk to your advisor, who, as always, recently moved offices into Nightingale Hall. No mortal can enter Nightingale and find what they are looking for without very good directions. Luckily, your friend who graduated last year knows the way and wrote his directions in code on the back of a Rebecca's sandwich he stashed in the runnels and forgot about. If you want to graduate, you’re going to have to find that sandwich…"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 35,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "RA",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "Steakhouse vegan wrap",
+				"X": 40,
+				"Y": 5,
+				"Color": [0, 255, 140]
 			}
 		]
 	},
-	{
-		"Cut Scenes": [
-			"The codes look good! You sprint to Nightingale, but right as you start heading up above ground in Forsyth, you get an email: your advisor’s been switched again! Find their office in the tunnels."
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
+
 	{
 		"Cut Scenes": [
 			"Financial Aid",
-			"Finally, your advisor gives you the go ahead. But they also notice that your financial aid has been cancelled, and your bill is due next week. Time to scour the tunnels for money!",
+			"Finally, your advisor gives you the go ahead. But they also notice that your financial aid has been cancelled, and your bill is due next week.!",
+		    "Even after 3 days of searching the tunnels, you only managed to collect $23. That’s not going to cut it. Maybe if you forge your FAFSA they will give you more money, right? We should find some high quality forgery tools if this is going to work...",
+
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 36,
+		"Player Y": 13,
 		"Enemies": [
 			{
 				"Type": "HUSKY",
@@ -168,32 +201,10 @@
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
-	{
-		"Cut Scenes": [
-			"Even after 3 days of searching the tunnels, you only managed to collect $23. That’s not going to cut it. Maybe if you forge your FAFSA they will give you more money, right? We should find some high quality forgery tools if this is going to work..."
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "Mitt Romney's W2 Form",
+				"X": 3,
+				"Y": 25,
+				"Color": [67, 103, 122]
 			}
 		]
 	},
@@ -203,20 +214,36 @@
 			"So, how can you make money? It hits you! The entrepreneurial spirit! You did notice a ton of discarded Canada Goose jackets around the tunnels, that has to be worth something, right? Let’s collect those!",
 		],
 		"Player X": 12,
-		"Player Y": 20,
+		"Player Y": 23,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "PROF",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Speed": 90,
+				"Range": 6,
+				"HurtPower": 0.07,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "canada Goose jacket",
+				"X": 8,
+				"Y": 30,
+				"Color": [175, 227, 255]
+			},
+			{
+				"Name": "canada Goose jacket",
+				"X": 20,
+				"Y": 28,
+				"Color": [175, 227, 255]
+			},
+			{
+				"Name": "canada Goose jacket",
+				"X": 27,
+				"Y": 9,
+				"Color": [175, 227, 255]
 			}
 		]
 	},
@@ -224,46 +251,25 @@
 		"Cut Scenes": [
 			"Now that you have your product, it’s time to visit the IDEA lab and find your cofounder and develop your website"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 20,
+		"Player Y": 30,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "NUWAVE",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "Marcus Zarbowski",
+				"X": 40,
+				"Y": 17,
+				"Color": [214, 115, 34]
 			}
 		]
 	},
-	{
-		"Cut Scenes": [
-			"Despite your success in business, D’Amore and McKim are not pleased with your rogue business model and are working to expel you, if only they can find you. Run!"
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
+
 	{
 		"Cut Scenes": [
 			"UHCS",
@@ -280,10 +286,10 @@
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "flu",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [145, 53, 76]
 			}
 		]
 	},
@@ -295,42 +301,21 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "RA",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "UHCS Appointment",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [255, 89, 130]
 			}
 		]
 	},
-	{
-		"Cut Scenes": [
-			"You climb up from Forsyth, appointment card in hand, only to get the news - the doctor has been lost in the tunnels all week! Time to find them I guess..."
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
+
 	{
 		"Cut Scenes": [
 			"OSCRR",
@@ -340,17 +325,21 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "PROF",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Speed": 80,
+				"Range": 5,
+				"HurtPower": 0.05,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "your dog gave you the flu",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [156, 107, 255]
 			}
 		]
 	},
@@ -362,17 +351,17 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "NUWAVE",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Taco bell Ghost",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [50, 48, 142]
 			}
 		]
 	},
@@ -391,16 +380,16 @@
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Dorito",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [193, 87, 42]
 			}
 		]
 	},
 	{
 		"Cut Scenes": [
-			"The Appointment",
+			"Great, you got away with OSCRR. They saw your reason to miss the exam fit but you should still go to see UHCS since you're actually not feeling great.",
 			"Things are going well. UHCS calls you in for an appointment. And it’s timely, in the afternoon tomorrow! This is nice!",
 			"They run tests, and no one will tell you why. You wait for hours. The doctor gives you the papers to say you’re all set and healthy. Nothing is wrong. It was a false alarm, probably just remnants from the flu. You then explode. Guess something else was wrong. Lost a life.",
 			"Find A Job",
@@ -410,61 +399,21 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "PROF",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Speed": 80,
+				"Range": 5,
+				"HurtPower": 0.05,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Revolutionizing the industry job # 1",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
-	{
-		"Cut Scenes": [
-			"Great, all suited up. You could talk to them, but it’s probably a good idea to have your resume ready. Everything looks good except for your education section - the automated servers won’t accept your resume unless the college name is formatted just right. You must seek the one true Northeastern University name disciple in order to find out how one can truly pass through the filter."
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
-			}
-		]
-	},
-	{
-		"Cut Scenes": [
-			"Suited up and carrying your correct resume, this should be easy! Just go talk to employers at the tables!"
-		],
-		"Player X": 12,
-		"Player Y": 20,
-		"Enemies": [
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			}
-		],
-		"Items": [
-			{
-				"Name": "Vaccine",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [106, 230, 255]
 			}
 		]
 	},
@@ -476,17 +425,41 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "HUSKY",
+				"Type": "DRAGAOUN",
 				"X": 5,
 				"Y": 27
 			}
 		],
 		"Items": [
 			{
-				"Name": "Vaccine",
+				"Name": "Threat to identify as white to lower diversity",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to drop out",
+				"X": 1,
+				"Y": 23,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to not donate $1 on Giving Day",
+				"X": 32,
+				"Y": 24,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to major in Music to lower employment rate",
+				"X": 24,
+				"Y": 15,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to switch out of CS to cut women in CS by half",
+				"X": 40,
+				"Y": 5,
+				"Color": [255, 66, 100]
 			}
 		]
 	}
