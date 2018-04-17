@@ -177,6 +177,12 @@ class Level {
     for(Enemy e : l.enemies) {
       if (e instanceof ProfessorEnemy) {
         this.enemies.add(new ProfessorEnemy(e.x, e.y));
+        println("added prof enemy");
+
+      }
+      if (e instanceof HuskyEnemy) {
+        this.enemies.add(new HuskyEnemy(e.x, e.y));
+        println("added husky enemy");
       }
     }
     
