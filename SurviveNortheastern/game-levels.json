@@ -63,7 +63,7 @@
 				"X": 24,
 				"Y": 17,
 				"Range": 8,
-				"Power Range": 2,
+				"Power Range": 4,
 				"Power 1": 1,
 				"Power 2": 2,
 				"Power 3": 3
@@ -182,8 +182,18 @@
 				"Type": "RA",
 				"X": 5,
 				"Y": 27,
+				"Range": 10,
+				"Power Range": 3,
+				"Power 1": 1,
+				"Power 2": 2,
+				"Power 3": 3
+			},
+			{
+				"Type": "RA",
+				"X": 32,
+				"Y": 12,
 				"Range": 8,
-				"Power Range": 2,
+				"Power Range": 6,
 				"Power 1": 1,
 				"Power 2": 2,
 				"Power 3": 3
@@ -305,13 +315,13 @@
 				"Type": "HUSKY",
 				"X": 40,
 				"Y": 5,
-				"Bite Power": 5
+				"Bite Power": 6
 			},
 			{
 				"Type": "HUSKY",
 				"X": 24,
 				"Y": 15,
-				"Bite Power": 6
+				"Bite Power": 7
 			},
 			{
 				"Type": "HUSKY",
@@ -333,8 +343,8 @@
 		"Cut Scenes": [
 			"Congrats, you got it! Unfortunately, it’s pretty bad this year and you probably need a doctor. Luckily there’s UHCS, always there for you. If only you could find the the mythical UHCS appointment - it’s probably somewhere down here like everything else, right?"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 30,
 		"Enemies": [
 			{
 				"Type": "RA",
