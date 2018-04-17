@@ -24,6 +24,18 @@ class Selector extends Task {
   }
 }
 
+class RandomSelector extends Task {
+  ArrayList<Task> options;
+  
+  RandomSelector(ArrayList<Task> options) {
+    this.options = options;
+  }
+  
+  int execute(Level l, Enemy e) {
+    return this.options.get((int) (Math.random() * this.options.size())).execute(l, e);
+  }
+}
+
 class Sequence extends Task {
   ArrayList<Task> tasks;
   

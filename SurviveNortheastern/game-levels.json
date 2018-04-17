@@ -1,5 +1,5 @@
 [
-	{
+		{
 		"Cut Scenes": [
 			"Survive Northeastern",
 			"Controls: Arrow Keys",
@@ -53,7 +53,7 @@
 	{
 		"Cut Scenes": [
 			"Vaccines in hand, you triumphantly pull up your phone to log onto myNortheastern to apply for graduation. But you can’t get NUWave from the tunnels, and you’re locked in for the night! Quick! Find a place your phone gets reception before midnight hits!",
-			"Watch out for the RAs as they're trying to stop using your phone."
+			"Watch out for the RAs as they're trying to stop you from using your phone."
 		],
 		"Player X": 31,
 		"Player Y": 28,
@@ -61,12 +61,22 @@
 			{
 				"Type": "RA",
 				"X": 24,
-				"Y": 17
+				"Y": 17,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 1,
+				"Power 2": 2,
+				"Power 3": 3
 			},
 			{
 				"Type": "RA",
 				"X": 2,
-				"Y": 23
+				"Y": 23,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 1,
+				"Power 2": 2,
+				"Power 3": 3
 			}
 		],
 		"Items": [
@@ -171,7 +181,12 @@
 			{
 				"Type": "RA",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 1,
+				"Power 2": 2,
+				"Power 3": 3
 			}
 		],
 		"Items": [
@@ -306,7 +321,12 @@
 			{
 				"Type": "RA",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Range": 8,
+				"Power Range": 2,
+				"Power 1": 1,
+				"Power 2": 2,
+				"Power 3": 3
 			}
 		],
 		"Items": [

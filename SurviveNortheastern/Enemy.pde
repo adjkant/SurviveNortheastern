@@ -62,8 +62,8 @@ class NUWaveEnemy extends Enemy {
 }
 
 class RAEnemy extends  Enemy {
-  RAEnemy(int x, int y) {
-    super(x, y, new RABehavior(), 20);
+  RAEnemy(int x, int y, int range, int powerRange, float power1, float power2, float power3) {
+    super(x, y, new RABehavior(range, powerRange, power1, power2, power3), 30);
     fill(255, 0, 0);
     stroke(255);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);

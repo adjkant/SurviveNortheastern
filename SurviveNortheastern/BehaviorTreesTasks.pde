@@ -62,16 +62,24 @@ class NUWaveBehavior extends Task {
 }
 
 class RABehavior extends Task {
+  Task behavior;
+  
+  RABehavior(int range, int hurtRange, float hurtPower1, float hurtPower2, float hurtPower3) {
+    
+    ArrayList<Task> hurts = new ArrayList<Task>();
+    hurts.add(new RangeHurt(0, hurtRange, hurtPower1));
+    hurts.add(new RangeHurt(0, hurtRange, hurtPower2));
+    hurts.add(new RangeHurt(0, hurtRange, hurtPower3));
+    
+    ArrayList<Task> seq = new ArrayList<Task>();
+    seq.add(new ActTimerTick());
+    seq.add(new Condition(new OrPredicate(new InSight(), new WithinDistance(range)), new MoveToPlayer(0), new RandomMove(0)));
+    seq.add(new RandomSelector(hurts));
+    this.behavior = new Sequence(seq);
+  }
+  
   int execute(Level l, Enemy e) {
-    ArrayList<PVector> possibleMoves = l.tunnels.adjacentSpaces(new PVector(e.x, e.y));
-    if (possibleMoves != null) {
-      PVector selectedMove = possibleMoves.get((int) (Math.random() * possibleMoves.size()));
-      e.x = (int)selectedMove.x;
-      e.y = (int)selectedMove.y;
-      return SUCCESS;
-    } else {
-      return FAIL;
-    }
+    return this.behavior.execute(l, e);
   }
 }
 
@@ -165,18 +173,30 @@ class AStarMove extends Task {
 }
 
 class RangeHurt extends Task {
+  int moveTick;
+  boolean tick;
   int range;
   float severity;
   
   RangeHurt(int range, float severity) {
+    this.tick = false;
+    this.range = range;
+    this.severity = severity;
+  }
+  
+  RangeHurt(int moveTick, int range, float severity) {
+    this.tick = true;
+    this.moveTick = moveTick;
     this.range = range;
     this.severity = severity;
   }
   
   int execute(Level l, Enemy e) {
-    int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
-    if (distance <= this.range) {
-      l.playerHealth -= this.severity * (this.range - distance);
+    if (!this.tick || e.actTimer == this.moveTick) {
+      int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
+      if (distance <= this.range) {
+        l.playerHealth -= this.severity * (this.range - distance);
+      }
     }
     
     return SUCCESS;
