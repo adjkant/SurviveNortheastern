@@ -62,7 +62,7 @@ void setup() {
       int x = itemJSON.getInt("X");
       int y = itemJSON.getInt("Y");
       ArrayList<Integer> c = NumbersToArrayList(itemJSON.getJSONArray("Color"));
-      Item i = new Item(x, y, new PVector(c.get(0), c.get(1), c.get(2)));
+      Item i = new Item(itemJSON.getString("Name"), x, y, new PVector(c.get(0), c.get(1), c.get(2)));
       items.add(i);
       
       iIndex++;

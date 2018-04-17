@@ -1,11 +1,13 @@
 
 
 class Item {
+  String name;
   int x;
   int y;
   PShape s;
   
-  Item(int x, int y, PVector c) {
+  Item(String name, int x, int y, PVector c) {
+    this.name = name;
     this.x = x;
     this.y = y;
     fill(c.x, c.y, c.z);
@@ -13,7 +15,8 @@ class Item {
     this.s = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
   }
   
-  Item(int x, int y, PShape s) {
+  Item(String name, int x, int y, PShape s) {
+    this.name = name;
     this.x = x;
     this.y = y;
     this.s = s;

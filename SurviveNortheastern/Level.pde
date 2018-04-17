@@ -55,6 +55,7 @@ class Level {
       this.drawEnemies();
       this.drawItems();
       this.drawHealth();
+      this.drawItemKey();
     } else if (this.isPlaying() && this.isWon()) {
       this.drawLevelWon();
     } else if (this.isOver() && !this.isWon()) {
@@ -94,6 +95,20 @@ class Level {
       drawShapeCenter(createShape(RECT, 0, 0, this.playerHealth*3, 10), 20, 30, 0);
     }
     
+  }
+  
+  void drawItemKey() {
+    textSize(15);
+    fill(255);
+    text("Items Remaining:", 20, 60);
+    textSize(12);
+    fill(255);
+    int h = 80;
+    for (Item i : items) {
+      drawShapeCenter(i.s, 35, h+6, 0);
+      text(i.name, 37, h);
+      h += 20;
+    }
   }
   
   void drawCutScene() {
@@ -228,7 +243,7 @@ class Level {
     
     this.items = new ArrayList<Item>();
     for(Item i : l.items) {
-      this.items.add(new Item(i.x, i.y, i.s));
+      this.items.add(new Item(i.name, i.x, i.y, i.s));
     }
     
   }
