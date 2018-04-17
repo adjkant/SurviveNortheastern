@@ -18,6 +18,15 @@
 				"Range": 5,
 				"HurtPower": 0.05,
 				"SlowPower": 0.01,
+			},
+			{
+				"Type": "PROF",
+				"X": 20,
+				"Y": 12,
+				"Speed": 80,
+				"Range": 5,
+				"HurtPower": 0.05,
+				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
@@ -44,22 +53,27 @@
 	{
 		"Cut Scenes": [
 			"Vaccines in hand, you triumphantly pull up your phone to log onto myNortheastern to apply for graduation. But you can’t get NUWave from the tunnels, and you’re locked in for the night! Quick! Find a place your phone gets reception before midnight hits!",
-			""
+			"Watch out for the RAs as they're trying to stop using your phone."
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 31,
+		"Player Y": 28,
 		"Enemies": [
 			{
 				"Type": "RA",
-				"X": 5,
-				"Y": 27
+				"X": 24,
+				"Y": 17
+			},
+			{
+				"Type": "RA",
+				"X": 2,
+				"Y": 23
 			}
 		],
 		"Items": [
 			{
 				"Name": "Reception",
-				"X": 12,
-				"Y": 12,
+				"X": 8,
+				"Y": 34,
 				"Color": [0, 0, 255]
 			}
 		]
@@ -81,26 +95,26 @@
 		"Items": [
 			{
 				"Name": "That 8 AM class",
-				"X": 12,
-				"Y": 12,
+				"X": 3,
+				"Y": 27,
 				"Color": [0, 0, 255]
 			},
 			{
 				"Name": "The class you wish you didn't leave to last semester",
-				"X": 12,
-				"Y": 12,
+				"X": 40,
+				"Y": 17,
 				"Color": [0, 0, 255]
 			},
 			{
 				"Name": "The class with more than 5 girls",
-				"X": 12,
-				"Y": 12,
+				"X": 40,
+				"Y": 5,
 				"Color": [0, 0, 255]
 			},
 			{
 				"Name": "The only class you need higher than a D",
-				"X": 12,
-				"Y": 12,
+				"X": 25,
+				"Y": 5,
 				"Color": [0, 0, 255]
 			}
 		]
@@ -122,14 +136,14 @@
 		"Items": [
 			{
 				"Name": "Link that mentions other important links",
-				"X": 12,
-				"Y": 12,
+				"X": 1,
+				"Y": 23,
 				"Color": [0, 0, 255]
 			},
 			{
 				"Name": "Link that talks about great people who graduated from Northeastern",
-				"X": 12,
-				"Y": 12,
+				"X": 32,
+				"Y": 24,
 				"Color": [0, 0, 255]
 			},
 			{
@@ -140,8 +154,8 @@
 			},
 			{
 				"Name": "Actual link to graduate",
-				"X": 12,
-				"Y": 12,
+				"X": 24,
+				"Y": 15,
 				"Color": [0, 0, 255]
 			}
 		]
@@ -174,7 +188,7 @@
 			"Financial Aid",
 			"Finally, your advisor gives you the go ahead. But they also notice that your financial aid has been cancelled, and your bill is due next week.!",
 		    "Even after 3 days of searching the tunnels, you only managed to collect $23. That’s not going to cut it. Maybe if you forge your FAFSA they will give you more money, right? We should find some high quality forgery tools if this is going to work...",
-		
+
 		],
 		"Player X": 12,
 		"Player Y": 20,
