@@ -50,6 +50,7 @@ void setup() {
         enemies.add(new DragaounEnemy(x, y));
       } else {
         println("Invalid Enemy");
+        println(enemyJSON.getString("Type"));
       }
       
       eIndex++;
