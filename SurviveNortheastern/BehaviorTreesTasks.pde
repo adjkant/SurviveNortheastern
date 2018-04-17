@@ -33,20 +33,6 @@ class HuskyBehavior extends Task {
   }
 }
 
-class DragaounBehavior extends Task {
-  int execute(Level l, Enemy e) {
-    ArrayList<PVector> possibleMoves = l.tunnels.adjacentSpaces(new PVector(e.x, e.y));
-    if (possibleMoves != null) {
-      PVector selectedMove = possibleMoves.get((int) (Math.random() * possibleMoves.size()));
-      e.x = (int)selectedMove.x;
-      e.y = (int)selectedMove.y;
-      return SUCCESS;
-    } else {
-      return FAIL;
-    }
-  }
-}
-
 class NUWaveBehavior extends Task {
   int execute(Level l, Enemy e) {
     ArrayList<PVector> possibleMoves = l.tunnels.adjacentSpaces(new PVector(e.x, e.y));
@@ -83,10 +69,22 @@ class RABehavior extends Task {
   }
 }
 
-
-
-
-
+class DragaounBehavior extends Task {
+  Task behavior;
+  
+  DragaounBehavior(int range, float power, int powerFrequency) {
+    
+    ArrayList<Task> seq = new ArrayList<Task>();
+    seq.add(new ActTimerTick());
+    seq.add(new RangeHurtMod(powerFrequency, range, power));
+    seq.add(new AStarMove(0));
+    this.behavior = new Sequence(seq);
+  }
+  
+  int execute(Level l, Enemy e) {
+    return this.behavior.execute(l, e);
+  }
+}
 
 
 
@@ -193,6 +191,29 @@ class RangeHurt extends Task {
   
   int execute(Level l, Enemy e) {
     if (!this.tick || e.actTimer == this.moveTick) {
+      int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
+      if (distance <= this.range) {
+        l.playerHealth -= this.severity * (this.range - distance);
+      }
+    }
+    
+    return SUCCESS;
+  }
+}
+
+class RangeHurtMod extends Task {
+  int moveTick;
+  int range;
+  float severity;
+  
+  RangeHurtMod(int moveTick, int range, float severity) {
+    this.moveTick = moveTick;
+    this.range = range;
+    this.severity = severity;
+  }
+  
+  int execute(Level l, Enemy e) {
+    if (e.actTimer % this.moveTick == 0) {
       int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
       if (distance <= this.range) {
         l.playerHealth -= this.severity * (this.range - distance);

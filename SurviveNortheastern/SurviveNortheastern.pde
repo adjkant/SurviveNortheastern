@@ -47,7 +47,7 @@ void setup() {
       } else if (enemyJSON.getString("Type").equals("RA")) {
         enemies.add(new RAEnemy(x, y, enemyJSON.getInt("Range"), enemyJSON.getInt("Power Range"), enemyJSON.getFloat("Power 1"), enemyJSON.getFloat("Power 2"), enemyJSON.getFloat("Power 3")));
       } else if (enemyJSON.getString("Type").equals("DRAGAOUN")) {
-        enemies.add(new DragaounEnemy(x, y));
+        enemies.add(new DragaounEnemy(x, y, enemyJSON.getInt("Range"), enemyJSON.getFloat("Power"), enemyJSON.getInt("Speed"), enemyJSON.getInt("Power Frequency")));
       } else {
         println("Invalid Enemy");
         println(enemyJSON.getString("Type"));
