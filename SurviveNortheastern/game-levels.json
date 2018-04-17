@@ -25,7 +25,7 @@
 				"Y": 12,
 				"Speed": 80,
 				"Range": 5,
-				"HurtPower": 0.05,
+				"HurtPower": 0.06,
 				"SlowPower": 0.01,
 			}
 		],
@@ -100,7 +100,7 @@
 				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27,
-				"Bite Power": 5
+				"Bite Power": 4
 			}
 		],
 		"Items": [
@@ -213,7 +213,13 @@
 				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27,
-				"Bite Power": 0.01
+				"Bite Power": 5
+			},
+			{
+				"Type": "HUSKY",
+				"X": 24,
+				"Y": 17,
+				"Bite Power": 5
 			}
 		],
 		"Items": [
@@ -292,21 +298,33 @@
 			"UHCS",
 			"Well, you survived and paid for school, but now they’re asking you to “go to class” and “take exams”. Time to get sick to avoid responsibility! Catch the flu in the tunnels!",
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 40,
+		"Player Y": 17,
 		"Enemies": [
 			{
 				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27,
-				"Bite Power": 0.01
+				"X": 40,
+				"Y": 5,
+				"Bite Power": 5
+			},
+			{
+				"Type": "HUSKY",
+				"X": 24,
+				"Y": 15,
+				"Bite Power": 6
+			},
+			{
+				"Type": "HUSKY",
+				"X": 9,
+				"Y": 20,
+				"Bite Power": 5
 			}
 		],
 		"Items": [
 			{
 				"Name": "flu",
-				"X": 12,
-				"Y": 12,
+				"X": 8,
+				"Y": 35,
 				"Color": [145, 53, 76]
 			}
 		]
@@ -392,14 +410,20 @@
 		"Cut Scenes": [
 			"The Ghost of Taco Bell says there are 5 hidden Dorito Loco tacos still in the tunnels, and that OSCRR board members have been known to accept them as bribes before. I guess it’s the only shot, right?"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 30,
 		"Enemies": [
 			{
 				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27,
-				"Bite Power": 0.01
+				"X": 12,
+				"Y": 22,
+				"Bite Power": 5
+			},
+			{
+				"Type": "HUSKY",
+				"X": 24,
+				"Y": 15,
+				"Bite Power": 5
 			}
 		],
 		"Items": [
@@ -407,6 +431,12 @@
 				"Name": "Dorito",
 				"X": 12,
 				"Y": 12,
+				"Color": [193, 87, 42]
+			},
+			{
+				"Name": "Dorito",
+				"X": 39,
+				"Y": 17,
 				"Color": [193, 87, 42]
 			}
 		]
