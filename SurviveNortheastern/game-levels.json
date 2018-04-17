@@ -74,7 +74,7 @@
 				"Name": "Reception",
 				"X": 8,
 				"Y": 34,
-				"Color": [0, 0, 255]
+				"Color": [235, 69, 56]
 			}
 		]
 	},
@@ -97,25 +97,25 @@
 				"Name": "That 8 AM class",
 				"X": 3,
 				"Y": 27,
-				"Color": [0, 0, 255]
+				"Color": [84, 90, 91]
 			},
 			{
 				"Name": "The class you wish you didn't leave to last semester",
 				"X": 40,
 				"Y": 17,
-				"Color": [0, 0, 255]
+				"Color": [84, 90, 91]
 			},
 			{
 				"Name": "The class with more than 5 girls",
 				"X": 40,
 				"Y": 5,
-				"Color": [0, 0, 255]
+				"Color": [84, 90, 91]
 			},
 			{
 				"Name": "The only class you need higher than a D",
 				"X": 25,
 				"Y": 5,
-				"Color": [0, 0, 255]
+				"Color": [84, 90, 91]
 			}
 		]
 	},
@@ -138,25 +138,25 @@
 				"Name": "Link that mentions other important links",
 				"X": 1,
 				"Y": 23,
-				"Color": [0, 0, 255]
+				"Color": [143, 183, 165]
 			},
 			{
 				"Name": "Link that talks about great people who graduated from Northeastern",
 				"X": 32,
 				"Y": 24,
-				"Color": [0, 0, 255]
+				"Color": [143, 183, 165]
 			},
 			{
 				"Name": "Semi-useful link",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [143, 183, 165]
 			},
 			{
 				"Name": "Actual link to graduate",
 				"X": 24,
 				"Y": 15,
-				"Color": [0, 0, 255]
+				"Color": [143, 183, 165]
 			}
 		]
 	},
@@ -164,8 +164,8 @@
 		"Cut Scenes": [
 			"Sadly, the link is broken. You’ve gotta go talk to your advisor, who, as always, recently moved offices into Nightingale Hall. No mortal can enter Nightingale and find what they are looking for without very good directions. Luckily, your friend who graduated last year knows the way and wrote his directions in code on the back of a Rebecca's sandwich he stashed in the runnels and forgot about. If you want to graduate, you’re going to have to find that sandwich…"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 8,
+		"Player Y": 35,
 		"Enemies": [
 			{
 				"Type": "RA",
@@ -176,9 +176,9 @@
 		"Items": [
 			{
 				"Name": "Steakhouse vegan wrap",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 40,
+				"Y": 5,
+				"Color": [0, 255, 140]
 			}
 		]
 	},
@@ -190,8 +190,8 @@
 		    "Even after 3 days of searching the tunnels, you only managed to collect $23. That’s not going to cut it. Maybe if you forge your FAFSA they will give you more money, right? We should find some high quality forgery tools if this is going to work...",
 
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 36,
+		"Player Y": 13,
 		"Enemies": [
 			{
 				"Type": "HUSKY",
@@ -202,9 +202,9 @@
 		"Items": [
 			{
 				"Name": "Mitt Romney's W2 Form",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 3,
+				"Y": 25,
+				"Color": [67, 103, 122]
 			}
 		]
 	},
@@ -214,24 +214,36 @@
 			"So, how can you make money? It hits you! The entrepreneurial spirit! You did notice a ton of discarded Canada Goose jackets around the tunnels, that has to be worth something, right? Let’s collect those!",
 		],
 		"Player X": 12,
-		"Player Y": 20,
+		"Player Y": 23,
 		"Enemies": [
 			{
 				"Type": "PROF",
 				"X": 5,
 				"Y": 27,
 				"Speed": 90,
-				"Range": 10,
+				"Range": 6,
 				"HurtPower": 0.07,
 				"SlowPower": 0.01,
 			}
 		],
 		"Items": [
 			{
-				"Name": "canada Goose jackets",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"Name": "canada Goose jacket",
+				"X": 8,
+				"Y": 30,
+				"Color": [175, 227, 255]
+			},
+			{
+				"Name": "canada Goose jacket",
+				"X": 20,
+				"Y": 28,
+				"Color": [175, 227, 255]
+			},
+			{
+				"Name": "canada Goose jacket",
+				"X": 27,
+				"Y": 9,
+				"Color": [175, 227, 255]
 			}
 		]
 	},
@@ -239,8 +251,8 @@
 		"Cut Scenes": [
 			"Now that you have your product, it’s time to visit the IDEA lab and find your cofounder and develop your website"
 		],
-		"Player X": 12,
-		"Player Y": 20,
+		"Player X": 20,
+		"Player Y": 30,
 		"Enemies": [
 			{
 				"Type": "NUWAVE",
@@ -251,9 +263,9 @@
 		"Items": [
 			{
 				"Name": "Marcus Zarbowski",
-				"X": 12,
-				"Y": 12,
-				"Color": [0, 0, 255]
+				"X": 40,
+				"Y": 17,
+				"Color": [214, 115, 34]
 			}
 		]
 	},
@@ -277,7 +289,7 @@
 				"Name": "flu",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [145, 53, 76]
 			}
 		]
 	},
@@ -299,7 +311,7 @@
 				"Name": "UHCS Appointment",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [255, 89, 130]
 			}
 		]
 	},
@@ -327,7 +339,7 @@
 				"Name": "your dog gave you the flu",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [156, 107, 255]
 			}
 		]
 	},
@@ -349,7 +361,7 @@
 				"Name": "Taco bell Ghost",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [50, 48, 142]
 			}
 		]
 	},
@@ -371,7 +383,7 @@
 				"Name": "Dorito",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [193, 87, 42]
 			}
 		]
 	},
@@ -401,7 +413,7 @@
 				"Name": "Revolutionizing the industry job # 1",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [106, 230, 255]
 			}
 		]
 	},
@@ -420,10 +432,34 @@
 		],
 		"Items": [
 			{
-				"Name": "lower rankings",
+				"Name": "Threat to identify as white to lower diversity",
 				"X": 12,
 				"Y": 12,
-				"Color": [0, 0, 255]
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to drop out",
+				"X": 1,
+				"Y": 23,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to not donate $1 on Giving Day",
+				"X": 32,
+				"Y": 24,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to major in Music to lower employment rate",
+				"X": 24,
+				"Y": 15,
+				"Color": [255, 66, 100]
+			},
+			{
+				"Name": "Threat to switch out of CS to cut women in CS by half",
+				"X": 40,
+				"Y": 5,
+				"Color": [255, 66, 100]
 			}
 		]
 	}
