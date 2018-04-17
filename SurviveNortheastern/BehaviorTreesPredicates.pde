@@ -3,6 +3,34 @@ abstract class Predicate {
   
 }
 
+class OrPredicate extends Predicate {
+  Predicate p1;
+  Predicate p2;
+  
+  OrPredicate(Predicate p1, Predicate p2) {
+    this.p1 = p1;
+    this.p2 = p2;
+  }
+  
+  boolean evaluate(Level l, Enemy e) {
+    return p1.evaluate(l, e) || p2.evaluate(l, e);
+  }
+}
+
+class AndPredicate extends Predicate {
+  Predicate p1;
+  Predicate p2;
+  
+  AndPredicate(Predicate p1, Predicate p2) {
+    this.p1 = p1;
+    this.p2 = p2;
+  }
+  
+  boolean evaluate(Level l, Enemy e) {
+    return p1.evaluate(l, e) && p2.evaluate(l, e);
+  }
+}
+
 class InSight extends Predicate {
   boolean evaluate(Level l, Enemy e) {
     return l.tunnels.allValid(l.playerLocation, new PVector(e.x, e.y));
