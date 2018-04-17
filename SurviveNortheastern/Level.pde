@@ -284,4 +284,16 @@ class Level {
     return free;
   }
   
+  ArrayList<PVector> freeSpacesOrPlayer(ArrayList<PVector> possible) {
+    ArrayList<PVector> free = new ArrayList<PVector>();
+    
+    for (PVector p : possible) {
+      if (spaceFree(p) || (this.playerLocation.x == p.x && this.playerLocation.y == p.y)) {
+        free.add(p);
+      }
+    }
+    
+    return free;
+  }
+  
 }

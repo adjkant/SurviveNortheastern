@@ -41,7 +41,7 @@ void setup() {
       if (enemyJSON.getString("Type").equals("PROF")) {
         enemies.add(new ProfessorEnemy(x, y, enemyJSON.getInt("Speed"), enemyJSON.getInt("Range"), enemyJSON.getFloat("HurtPower"), enemyJSON.getFloat("SlowPower")));
       } else if (enemyJSON.getString("Type").equals("HUSKY")) {
-        enemies.add(new HuskyEnemy(x, y));
+        enemies.add(new HuskyEnemy(x, y, enemyJSON.getFloat("Bite Power")));
       } else if (enemyJSON.getString("Type").equals("NUWAVE")) {
         enemies.add(new NUWaveEnemy(x, y));
       } else if (enemyJSON.getString("Type").equals("RA")) {

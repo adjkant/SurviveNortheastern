@@ -27,6 +27,13 @@ int manhattanDistance(PVector a, PVector b) {
   return (int)abs(a.x - b.x) + (int)abs(a.y - b.y);
 }
 
+float distance(PVector a, PVector b) {
+  float yDiff = Math.abs(a.y - b.y);
+  float xDiff = Math.abs(a.x - b.x);    
+  float dist = (float) Math.sqrt(yDiff * yDiff + xDiff * xDiff);
+  return dist; 
+}
+
 public class LevelNotFoundException extends Exception {
   public LevelNotFoundException() {
     super("Level Does Not Exist");

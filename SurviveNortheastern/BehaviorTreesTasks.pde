@@ -16,19 +16,20 @@ class ProfessorBehavior extends Task {
   }
 }
 
-
-
 class HuskyBehavior extends Task {
+  Task behavior;
+  
+  HuskyBehavior(float bitePower) {
+    
+    ArrayList<Task> seq = new ArrayList<Task>();
+    seq.add(new ActTimerTick());
+    seq.add(new Condition(new WithinDistance(15), new AStarMove(0), new RandomMove(0)));
+    seq.add(new NextToHurt(0, bitePower));
+    this.behavior = new Sequence(seq);
+  }
+  
   int execute(Level l, Enemy e) {
-    ArrayList<PVector> possibleMoves = l.tunnels.adjacentSpaces(new PVector(e.x, e.y));
-    if (possibleMoves != null) {
-      PVector selectedMove = possibleMoves.get((int) (Math.random() * possibleMoves.size()));
-      e.x = (int)selectedMove.x;
-      e.y = (int)selectedMove.y;
-      return SUCCESS;
-    } else {
-      return FAIL;
-    }
+    return this.behavior.execute(l, e);
   }
 }
 
@@ -142,6 +143,27 @@ class MoveToPlayer extends Task {
   }
 }
 
+class AStarMove extends Task {
+  int moveTick;
+  
+  AStarMove(int moveTick) {
+    this.moveTick = moveTick;
+  }
+  
+  int execute(Level l, Enemy e) {
+    if (e.actTimer == this.moveTick) {
+      PVector selectedMove = aStarNextMove(l, new PVector(e.x, e.y), l.playerLocation);
+      
+      // Move Player to closest position
+      if (selectedMove != null && !(selectedMove.x == l.playerLocation.x && selectedMove.y == l.playerLocation.y)) {
+        e.x = (int)selectedMove.x;
+        e.y = (int)selectedMove.y;
+      }
+    }
+    return SUCCESS;
+  }
+}
+
 class RangeHurt extends Task {
   int range;
   float severity;
@@ -155,6 +177,27 @@ class RangeHurt extends Task {
     int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
     if (distance <= this.range) {
       l.playerHealth -= this.severity * (this.range - distance);
+    }
+    
+    return SUCCESS;
+  }
+}
+
+class NextToHurt extends Task {
+  int moveTick;
+  float severity;
+  
+  NextToHurt(int moveTick, float severity) {
+    this.moveTick = moveTick;
+    this.severity = severity;
+  }
+  
+  int execute(Level l, Enemy e) {
+    if (e.actTimer == this.moveTick) {
+      int distance = manhattanDistance(l.playerLocation, new PVector(e.x, e.y));
+      if (distance == 1) {
+        l.playerHealth -= this.severity;
+      }
     }
     
     return SUCCESS;

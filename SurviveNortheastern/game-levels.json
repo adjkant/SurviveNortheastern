@@ -89,7 +89,8 @@
 			{
 				"Type": "HUSKY",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Bite Power": 5
 			}
 		],
 		"Items": [
@@ -196,7 +197,8 @@
 			{
 				"Type": "HUSKY",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Bite Power": 0.01
 			}
 		],
 		"Items": [
@@ -281,7 +283,8 @@
 			{
 				"Type": "HUSKY",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Bite Power": 0.01
 			}
 		],
 		"Items": [
@@ -375,7 +378,8 @@
 			{
 				"Type": "HUSKY",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Bite Power": 0.01
 			}
 		],
 		"Items": [

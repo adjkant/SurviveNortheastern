@@ -44,8 +44,8 @@ class ProfessorEnemy extends Enemy {
 }
 
 class HuskyEnemy extends Enemy {
-  HuskyEnemy(int x, int y) {
-    super(x, y, new HuskyBehavior(), 15);
+  HuskyEnemy(int x, int y, float bitePower) {
+    super(x, y, new HuskyBehavior(bitePower), 15);
     fill(181);
     stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
