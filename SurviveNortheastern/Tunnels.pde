@@ -1,5 +1,5 @@
-int GRID_WIDTH_LINES = 7; //number of vertical lines
-int GRID_HEIGHT_LINES = 8; //number of horizontal lines
+int GRID_WIDTH_LINES = 7; // number of vertical lines
+int GRID_HEIGHT_LINES = 8; // number of horizontal lines
 int GRID_WIDTH_SIZE = (GAME_SIZE / GRID_WIDTH_LINES); // space between vertical lines
 int GRID_HEIGHT_SIZE =(GAME_SIZE / GRID_HEIGHT_LINES); // space between horizontal lines
 
@@ -9,10 +9,8 @@ class Tunnels {
   HashMap<PVector, ArrayList<PVector>> adjacencyList;
   ArrayList<Building> buildings;
   ArrayList<Path> paths;
-  Drawing drawer;
  
   Tunnels() {
-    this.drawer = new Drawing();
     
     this.buildings = new ArrayList<Building>();
     addAllBuildings();
@@ -27,6 +25,39 @@ class Tunnels {
   boolean isValidMove(PVector loc, PVector newLoc) {
     ArrayList<PVector> validMoves = this.adjacencyList.get(loc);
     return validMoves.contains(newLoc);
+  }
+  
+  boolean allValid(PVector loc1, PVector loc2) {
+    if (loc1.x == loc2.x) {
+      
+      if (loc1.y > loc2.y) {
+        return allValid(loc2, loc1);
+      }
+      
+      while (loc1.y < loc2.y) {
+        if (adjacencyList.get(loc1) == null) {
+          return false;
+        }
+        loc1 = new PVector(loc1.x, loc1.y + 1);
+      }
+      return true;
+    } else if (loc1.y == loc2.y) {
+      
+      if (loc1.x > loc2.x) {
+        return allValid(loc2, loc1);
+      }
+      
+      while (loc1.x < loc2.x) {
+        if (adjacencyList.get(loc1) == null) {
+          return false;
+        }
+        loc1 = new PVector(loc1.x + 1, loc1.y);
+      }
+      return true;
+    } else {
+      return false;
+    }
+    
   }
   
   ArrayList<PVector> adjacentSpaces(PVector loc) {
@@ -81,14 +112,14 @@ class Tunnels {
   
   void drawBuildings() {
     for (Building b : this.buildings) {
-      this.drawer.drawSquare(b.s, b.x, b.y);
+      drawSquare(b.s, b.x, b.y);
       //text(b.name, 50, 50);
     }
   }
   
   void drawPaths() {
     for (Path p : this.paths) {
-      this.drawer.drawSquare(p.s, p.x, p.y);
+      drawSquare(p.s, p.x, p.y);
     }
   }
   

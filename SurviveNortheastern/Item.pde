@@ -20,7 +20,7 @@ class Item {
   }
   
   void drawItem() {
-    new Drawing().drawShapeCenter(this.s, this.x * SQUARE_SIZE, this.y * SQUARE_SIZE, 0);
+    drawShapeCenter(this.s, this.x * SQUARE_SIZE, this.y * SQUARE_SIZE, 0);
   }
   
 }

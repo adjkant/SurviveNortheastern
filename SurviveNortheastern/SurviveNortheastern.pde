@@ -39,7 +39,7 @@ void setup() {
       
       // Add enemy
       if (enemyJSON.getString("Type").equals("PROF")) {
-        enemies.add(new ProfessorEnemy(x, y));
+        enemies.add(new ProfessorEnemy(x, y, enemyJSON.getInt("Speed"), enemyJSON.getInt("Range"), enemyJSON.getFloat("HurtPower"), enemyJSON.getFloat("SlowPower")));
       } else if (enemyJSON.getString("Type").equals("HUSKY")) {
         enemies.add(new HuskyEnemy(x, y));
       } else if (enemyJSON.getString("Type").equals("NUWAVE")) {
@@ -83,8 +83,6 @@ void setup() {
 void draw() {
   try {
     Level l = game.getCurrentLevel();
-    println(l.playerLocation);
-    println(l.tunnels.adjacentSpaces(l.playerLocation));
     
     if (l.isPlaying() && !l.isOver()) {
       // Enemy Actions
@@ -122,8 +120,13 @@ void keyPressed() {
     Level curLevel = game.getCurrentLevel();
     if (key == CODED && curLevel.isPlaying() && !curLevel.isOver()) { 
       if (keyCode == UP || keyCode == DOWN || keyCode == LEFT || keyCode == RIGHT) {
-        curLevel.attemptMove(keyCode);
-        curLevel.removeItems();
+        if (curLevel.playerMoveStall < 1) {
+          curLevel.attemptMove(keyCode);
+          curLevel.removeItems();
+        } else {
+          curLevel.playerMoveStall -= 1;
+        }
+        
       }
     }
     

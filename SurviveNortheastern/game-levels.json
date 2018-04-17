@@ -3,7 +3,9 @@
 		"Cut Scenes": [
 			"Survive Northeastern",
 			"Controls: Arrow Keys",
-			"Welcome to your last semester! You’ve gone through over four years of classes and co-op, and it’s about time you blew this popsicle stand. Unfortunately, you’re missing some vaccinations, and there’s no way UHCS will be any help. Luckily, you’ve gotten word that there the exact vaccines you need are scattered around the tunnels! Lucky you! Now’s the time to find them before I am Here messes up your senior year."
+			"Player: Blue Dot",
+			"Welcome to your last semester! You’ve gone through over four years of classes and co-op, and it’s about time you blew this popsicle stand. Unfortunately, you’re missing some vaccinations, and there’s no way UHCS will be any help. Luckily, you’ve gotten word that there the exact vaccines you need are scattered around the tunnels! Lucky you! Now’s the time to find them before I am Here messes up your senior year.",
+			"Avoid the boring professors (chartruse dots) as they will put you to sleep with their lectures, making you move slower and slowly die."
 		],
 		"Player X": 12,
 		"Player Y": 20,
@@ -11,28 +13,12 @@
 			{
 				"Type": "PROF",
 				"X": 5,
-				"Y": 27
-			},
-			{
-				"Type": "HUSKY",
-				"X": 5,
-				"Y": 27
-			},
-			{
-				"Type": "NUWAVE",
-				"X": 5,
-				"Y": 27
-			},
-			{
-				"Type": "RA",
-				"X": 5,
-				"Y": 27
-			},
-			{
-				"Type": "DRAGAOUN",
-				"X": 5,
-				"Y": 27
-			},
+				"Y": 27,
+				"Speed": 80,
+				"Range": 5,
+				"HurtPower": 0.05,
+				"SlowPower": 0.01,
+			}
 		],
 		"Items": [
 			{
@@ -50,7 +36,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -71,7 +57,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -93,7 +79,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -114,7 +100,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -135,7 +121,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -157,7 +143,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -178,7 +164,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -200,7 +186,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -221,7 +207,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -242,7 +228,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -264,7 +250,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -285,7 +271,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -306,7 +292,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -328,7 +314,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -349,7 +335,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -370,7 +356,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -395,7 +381,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -416,7 +402,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -437,7 +423,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}
@@ -458,7 +444,7 @@
 		"Player Y": 20,
 		"Enemies": [
 			{
-				"Type": "PROF",
+				"Type": "HUSKY",
 				"X": 5,
 				"Y": 27
 			}

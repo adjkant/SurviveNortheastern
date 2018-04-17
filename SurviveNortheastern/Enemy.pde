@@ -24,22 +24,17 @@ abstract class Enemy {
   }
   
   void act(Level l) {
-    if (this.actTimer >= this.actRate) {
-      this.behaviorTree.execute(l, this);
-      this.actTimer = 0;
-    } else {
-      this.actTimer += 1;
-    }
+    this.behaviorTree.execute(l, this);
   }
   
   void drawEnemy() {
-    new Drawing().drawShapeCenter(this.enemyShape, (int) this.x * SQUARE_SIZE, (int) this.y * SQUARE_SIZE, 0);
+    drawShapeCenter(this.enemyShape, (int) this.x * SQUARE_SIZE, (int) this.y * SQUARE_SIZE, 0);
   }
 }
 
 class ProfessorEnemy extends Enemy {
-  ProfessorEnemy(int x, int y) {
-    super(x, y, new ProfessorBehavior(), 80);
+  ProfessorEnemy(int x, int y, int speed, int range, float hurtPower, float slowPower) {
+    super(x, y, new ProfessorBehavior(range, hurtPower, slowPower), speed);
     fill(147, 165, 101);
     stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
