@@ -34,16 +34,18 @@ class HuskyBehavior extends Task {
 }
 
 class NUWaveBehavior extends Task {
+  Task behavior;
+  
+  NUWaveBehavior(int range, float power) {  
+    ArrayList<Task> seq = new ArrayList<Task>();
+    seq.add(new ActTimerTick());
+    seq.add(new RandomMove(0));
+    seq.add(new RangeHurt(range, power));
+    this.behavior = new Sequence(seq);
+  }
+  
   int execute(Level l, Enemy e) {
-    ArrayList<PVector> possibleMoves = l.tunnels.adjacentSpaces(new PVector(e.x, e.y));
-    if (possibleMoves != null) {
-      PVector selectedMove = possibleMoves.get((int) (Math.random() * possibleMoves.size()));
-      e.x = (int)selectedMove.x;
-      e.y = (int)selectedMove.y;
-      return SUCCESS;
-    } else {
-      return FAIL;
-    }
+    return this.behavior.execute(l, e);
   }
 }
 

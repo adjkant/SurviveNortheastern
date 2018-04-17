@@ -1,5 +1,5 @@
 [
-		{
+	{
 		"Cut Scenes": [
 			"Survive Northeastern",
 			"Controls: Arrow Keys",
@@ -141,7 +141,9 @@
 			{
 				"Type": "NUWAVE",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Range": 4,
+				"Power": 0.1
 			}
 		],
 		"Items": [
@@ -274,7 +276,9 @@
 			{
 				"Type": "NUWAVE",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Range": 4,
+				"Power": 0.1
 			}
 		],
 		"Items": [
@@ -376,7 +380,9 @@
 			{
 				"Type": "NUWAVE",
 				"X": 5,
-				"Y": 27
+				"Y": 27,
+				"Range": 4,
+				"Power": 0.1
 			}
 		],
 		"Items": [

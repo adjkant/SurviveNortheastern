@@ -53,8 +53,8 @@ class HuskyEnemy extends Enemy {
 }
 
 class NUWaveEnemy extends Enemy {
-  NUWaveEnemy(int x, int y) {
-    super(x, y, new NUWaveBehavior(), 5);
+  NUWaveEnemy(int x, int y, int range, float power) {
+    super(x, y, new NUWaveBehavior(range, power), 3);
     fill(255, 241, 48);
     stroke(0);
     this.enemyShape = createShape(ELLIPSE, -SQUARE_SIZE/2, -SQUARE_SIZE/2, PLAYER_SIZE, PLAYER_SIZE);
